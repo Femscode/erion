@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Erion Token | Home</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/gsap.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/svg" href="images/favicon.svg">
+</head>
+
+<body class="crypt-dark section-dark font-set-1">
+
+    <!-- Hero/Header -->
+    <section class="container-fluid crypt-hero slider-3" id="home">
+
+        <!-- Header -->
+        <header class="header-boxed border-bottom-0 fixed-top mt-2">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+
+                <!-- Logo -->
+                <div class="crypt-logo dark">
+                    <a href="#home">
+                        <img src="assets/logo2.png" style="height:90px !important;width:120px">
+                    </a>
+                </div>
+                <div class="crypt-logo light">
+                    <a href="#home">
+                        <img src="assets/logo2.png" alt="" style="height:90px !important;width:120px">
+                    </a>
+                </div>
+
+                <!-- Menu -->
+                <div class="crypt-card hidesmscreen py-2 px-4">
+                    <!-- Link -->
+                    <div class="d-flex gap-5 fs-6 align-items-center px-0 p-1 m-0">
+
+                        <div class="dropdown nav-item profile_menu">
+
+                            <a class="nav-item text-link fw-bold text-uppercase crypt-grayscale-100 crypto-has-dropdown"
+                                href="#">
+                                Home
+
+                            </a>
+
+
+                        </div>
+                        <a class="nav-item text-link fw-bold text-uppercase crypt-grayscale-100" href="#about">About</a>
+                        <a class="nav-item text-link fw-bold text-uppercase crypt-grayscale-100"
+                            href="#roadmap">Roadmap</a>
+                        <a class="nav-item text-link fw-bold text-uppercase crypt-grayscale-100"
+                            href="#tokenomics">Tokenomics</a>
+
+                    </div>
+                </div>
+
+                <!-- Navigation menu / Button -->
+                <div class="col-auto d-flex flex-row align-items-center">
+                    <div class="user-settings gap-2 gap-sm-3">
+                        <!-- Modal (Profile) -->
+
+                        <!-- CTA -->
+                        <div class="flex">
+                            <a class="btn-meme py-1 px-2" href="assets/whitepaper.pdf"
+                                download="ERION_Whitepaper.pdf">Download Whitepaper</a>
+                        </div>
+                        <!-- Hamburger Menu -->
+                        <div id="mobile_menu" class="close meme-nav meme-card">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                                <svg class="me-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M4 6H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Offcanvas Navbar -->
+        <nav class="navbar py-0 navbar-dark bg-dark">
+            <div class="container-fluid">
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar">
+                    <!-- Header -->
+                    <div class="offcanvas-header card-line">
+                        <div class="d-flex align-items-center gap-3 crypt-grayscale-100 text-uppercase mb-0"></div>
+                        <button type="button"
+                            class="btn-close text-reset close-notify align-items-center justify-content-center"
+                            data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg class="close-notify" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.5 4.5L4.5 13.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.5 4.5L13.5 13.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Body -->
+                    <div class="offcanvas-body meme-section card-bs gd-bg">
+                        <!-- Menu -->
+                        <ul class="navbar-nav justify-content-end flex-grow-1 gap-2 mt-3 pb-3">
+                            <li><a class="nav-link h4" href="#home">Home</a></li>
+                            <li><a class="nav-link h4" href="#whitepaper">Whitepaper</a></li>
+                            <li><a class="nav-link h4" href="#utilities">Ecosystem</a></li>
+                            <li><a class="nav-link h4" href="#tokenomics">Tokenomics</a></li>
+                            <li><a class="nav-link h4" href="#faq">FAQ</a></li>
+                        </ul>
+                        <!-- Carousel Slider -->
+                        <div id="RewardCarousel" class="carousel slide card-bs mt-4" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#RewardCarousel" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label=""></button>
+                                <button type="button" data-bs-target="#RewardCarousel" data-bs-slide-to="1"
+                                    aria-label=""></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="col-12 p-3 reward-bg2 pb-5">
+                                        <h4 class="fw-medium text-white mb-1">Invite Friends for Rewards</h4>
+                                        <p class="text-white mb-3">Invite friends and get 20% commissions.</p>
+                                        <a class="btn btn-editor btn-info mt-2" href="#!" data-bs-toggle="modal"
+                                            data-bs-target="#RewardCrypto">Invite friends</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="col-12 p-3 reward-bg3 pb-5">
+                                        <h4 class="fw-medium text-white text-white mb-1">Crypt Affiliate Programs</h4>
+                                        <p class="text-white mb-3">Apply and earn up to 60% Meme commission!</p>
+                                        <a class="btn btn-editor btn-success mt-2" href="#!" data-bs-toggle="modal"
+                                            data-bs-target="#RewardCrypto">Apply now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <div class="container-fluid rounded align-items-center gorditas">
+
+            <!-- Assets -->
+            <div class="d-flex justify-content-center">
+                <div class="position-relative">
+                    <img class="position-absolute z-0 m-auto" src="images/slider/toadious-m6LJO4Gv4JtMo3Jd.avif" alt=""
+                        width="1100">
+                    <!-- <img class="position-absolute z-0 m-auto" src="assets/moving_falcon.gif" alt=""
+                        width="1100"> -->
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="container pt-5 mt-5 mb-5 pb-5">
+                <div class="row card-text pt-5">
+                    <h2 class="text-uppercase crypt-grayscale-100 fw-bold z-1">The</h2>
+                    <h3 class="text-lg text-uppercase gd-text1 z-1">Erion Token</h3>
+
+                    <h3 class="col-md-8 crypt-grayscale-100 z-1">Built on the Ethereum ERC-20 standard, combining
+                        strategic deflationary mechanics and real-world integrations.</h3>
+                    <h6 class="col-md-6 fs-5 crypt-grayscale-200 z-1">
+                        ERION combines strategic deflationary mechanics, staking rewards, and real-world integrations to
+                        create a token that continuously multiplies value for its holders.
+                    </h6>
+
+                    <div class="d-flex mt-3">
+                        <div class="d-sm-flex flex-sm-row card align-items-center gap-3 text-bg-dark">
+                            <button class="btn btn-lg shiny-cta signup-btn text-uppercase">Mobile Game Launch Q3
+                                2025!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="container section-1600x">
+                <div class="row">
+                    <div class="d-sm-flex px-0">
+                        <div
+                            class="col-md-4 mb-4 g-2 card crypt-card meme-section disabled-hover card-2 border-0  ">
+                            <div class="card-body">
+                                <h4 class="card-title link text-dark mb-2">Dynamic Supply Reduction</h4>
+                                <h1 class="card-title text-dark mt-4 mb-2">Burn</h1>
+                                <p class="card-text text-dark">
+                                    A percentage of every transaction is burned to ensure scarcity
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-4 mb-4 g-2 card crypt-card meme-section disabled-hover border-0  card-1 ">
+                            <div class="card-body">
+                                <h3 class="card-title text-dark mb-2">Auto-Staking</h3>
+                                <h1 class="card-title text-dark mt-4 mb-2">Yield</h1>
+                                <p class="card-text text-dark">
+                                    Holders earn additional tokens through compounding staking mechanism
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-4 mb-4 g-2 card crypt-card meme-section disabled-hover border-0  card-3 ">
+                            <div class="card-body">
+                                <h3 class="card-title text-dark mb-2">Liquidity</h3>
+                                <h1 class="card-title text-dark mt-4 mb-2">Stable</h1>
+                                <p class="card-text text-dark">
+                                    A portion of fees is allocated to the liquidity pool for market stability
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Welcome text -->
+    <section class="container-fluid meme-section px-0">
+
+        <!-- trigger 1 -->
+        <div class="gsap-text meme border-5x border-start-0 border-end-0 color5 py-4 px-0">
+            <div class="scroll text2">
+                <div>
+                    Welcome to ERION Gaming <span> Play-to-Earn 🎮 </span>
+                </div>
+                <div>
+                    Welcome to ERION Gaming <span> Play-to-Earn 🎮 </span>
+                </div>
+                <div>
+                    Welcome to ERION Gaming <span> Play-to-Earn 🎮 </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- trigger 2 -->
+        <div class="gsap-text meme color2 border-5x border-start-0 border-end-0 border-dark card-transform-y py-4 px-0">
+            <div class="scroll text2">
+                <div>
+                    Mobile Game <span> Q3 2025 🎮 </span>
+                    Battle Arena <span> Coming Soon 🎮 </span>
+                    NFT Integration <span> Q4 2025 🎮 </span>
+                    Play & Earn <span> ERION Token 🎮 </span>
+                    Multiplayer <span> PvP Battles 🎮 </span>
+                </div>
+                <div>
+                    Mobile Game <span> Q3 2025 🎮 </span>
+                    Battle Arena <span> Coming Soon 🎮 </span>
+                    NFT Integration <span> Q4 2025 🎮 </span>
+                    Play & Earn <span> ERION Token 🎮 </span>
+                    Multiplayer <span> PvP Battles 🎮 </span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="container-fluid align-items-center meme-section pb-5" id="about">
+
+        <!-- objects -->
+        <div class="flex position-relative">
+            <img class="position-absolute" src="images/slider/star.svg" alt="">
+        </div>
+
+        <!-- content -->
+        <div class="container meme-section crypt-card justify-content-center text-bg-dark p-4">
+            <!-- content -->
+            <div class="d-sm-flex align-items-center">
+
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-7 p-2 p-sm-5">
+
+                    <div class="text-left">
+                        <h2>About ERION</h2>
+                        <p class="crypt-grayscale-400 mt-3">A revolutionary gaming token that combines Play-to-Earn
+                            mechanics with
+                            <br>sustainable tokenomics and real-world utility.
+                        </p>
+                    </div>
+                    <div class="d-flex flex-row gap-2 align-items-center">
+                        <img class="grayscale-item" alt="" style="width:32px;" src="images/icon/check-fill.svg">
+                        <h6 class="fs-5 mb-0">Auto-Staking Rewards System</h6>
+                    </div>
+                    <div class="d-flex flex-row gap-2 align-items-center">
+                        <img class="grayscale-item" alt="" style="width:32px;" src="images/icon/check-fill.svg">
+                        <h6 class="fs-5 mb-0">Dynamic Supply Reduction</h6>
+                    </div>
+                    <div class="d-flex flex-row gap-2 align-items-center">
+                        <img class="grayscale-item" alt="" style="width:32px;" src="images/icon/check-fill.svg">
+                        <h6 class="fs-5 mb-0">Play-to-Earn Mobile Game</h6>
+                    </div>
+                    <div class="card card-border mt-4">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold mb-2">Launching Q3 2025 with <span
+                                    class="badge text-bg-warning text-dark fs-6 fw-bold">3+</span> game modes</h4>
+                            <p class="card-text">Experience the future of gaming with ERION's innovative Play-to-Earn
+                                ecosystem.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-5">
+                    <img alt="" style="width:100%;" src="images/features/experienced-trade.png">
+                </div>
+
+            </div>
+
+            <!-- count -->
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card bg-4 p-3">
+                        <h3 class="text-dark">10%</h3>
+                        <p class="text-dark">Auto-Burn Rate</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card bg-2 p-3">
+                        <h3 class="text-dark">5%</h3>
+                        <p class="text-dark">Staking Rewards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="container-fluid align-items-center meme-section" id="roadmap">
+
+        <div class="container pt-5 pb-5">
+
+            <!-- objects -->
+            <div class="d-flex justify-content-end position-relative">
+                <img class="position-absolute" src="images/slider/arrow-bg2.png" alt="" width="150">
+            </div>
+
+            <h2 class="text-center crypt-grayscale-100">Roadmap</h2>
+
+
+            <div class="row mt-5 pt-2">
+                <div id="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px"
+                                viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+                                <path fill="#FFFFFF"
+                                    d="M19.998,6.766l-5.759-0.544c-0.362-0.032-0.676-0.264-0.822-0.61l-2.064-4.999
+                                    c-0.329-0.825-1.5-0.825-1.83,0L7.476,5.611c-0.132,0.346-0.462,0.578-0.824,0.61L0.894,6.766C0.035,6.848-0.312,7.921,0.333,8.499
+                                    l4.338,3.811c0.279,0.246,0.395,0.609,0.314,0.975l-1.304,5.345c-0.199,0.842,0.708,1.534,1.468,1.089l4.801-2.822
+                                    c0.313-0.181,0.695-0.181,1.006,0l4.803,2.822c0.759,0.445,1.666-0.23,1.468-1.089l-1.288-5.345
+                                    c-0.081-0.365,0.035-0.729,0.313-0.975l4.34-3.811C21.219,7.921,20.855,6.848,19.998,6.766z" />
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Phase 1 – Foundation & Launch (Q1 2025)</h4>
+                            <ul class="mt-3">
+                                <li>Smart contract development & audit</li>
+                                <li>Initial DEX Offering (IDO) & listing on Uniswap</li>
+                                <li>Community building & social media launch</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px"
+                                viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+                                <path fill="#FFFFFF"
+                                    d="M17.92,3.065l-1.669-2.302c-0.336-0.464-0.87-0.75-1.479-0.755C14.732,0.008,7.653,0,7.653,0v5.6
+                                    c0,0.096-0.047,0.185-0.127,0.237c-0.081,0.052-0.181,0.06-0.268,0.02l-1.413-0.64C5.773,5.183,5.69,5.183,5.617,5.215l-1.489,0.65
+                                    c-0.087,0.038-0.19,0.029-0.271-0.023c-0.079-0.052-0.13-0.141-0.13-0.235V0H2.191C1.655,0,1.233,0.434,1.233,0.97
+                                    c0,0,0.025,15.952,0.031,15.993c0.084,0.509,0.379,0.962,0.811,1.242l2.334,1.528C4.671,19.905,4.974,20,5.286,20h10.307
+                                    c1.452,0,2.634-1.189,2.634-2.64V4.007C18.227,3.666,18.12,3.339,17.92,3.065z M16.42,17.36c0,0.464-0.361,0.833-0.827,0.833H5.341
+                                    l-1.675-1.089h10.341c0.537,0,0.953-0.44,0.953-0.979V2.039l1.459,2.027V17.36L16.42,17.36z" />
+                            </svg>
+                        </div>
+                        <!-- objects -->
+                        <div class="d-flex position-relative">
+                            <img class="position-absolute" src="images/slider/grid-3.svg" alt="">
+                        </div>
+                        <div class="timeline-content right">
+                            <h4>Phase 2 – Expansion & Partnerships (Q2 2025)</h4>
+                            <ul class="mt-3">
+                                <li>Strategic CEX listings (KuCoin, Gate.io, etc.)</li>
+                                <li>Staking & liquidity farming launch</li>
+                                <li>First merchant adoption for ERION payments</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px"
+                                viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+                                <path fill="#FFFFFF"
+                                    d="M19.998,6.766l-5.759-0.544c-0.362-0.032-0.676-0.264-0.822-0.61l-2.064-4.999
+                                    c-0.329-0.825-1.5-0.825-1.83,0L7.476,5.611c-0.132,0.346-0.462,0.578-0.824,0.61L0.894,6.766C0.035,6.848-0.312,7.921,0.333,8.499
+                                    l4.338,3.811c0.279,0.246,0.395,0.609,0.314,0.975l-1.304,5.345c-0.199,0.842,0.708,1.534,1.468,1.089l4.801-2.822
+                                    c0.313-0.181,0.695-0.181,1.006,0l4.803,2.822c0.759,0.445,1.666-0.23,1.468-1.089l-1.288-5.345
+                                    c-0.081-0.365,0.035-0.729,0.313-0.975l4.34-3.811C21.219,7.921,20.855,6.848,19.998,6.766z" />
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Phase 3 – Utility & Ecosystem Growth (Q3 2025)</h4>
+                            <ul class="mt-3">
+                                <li>NFT & metaverse partnerships</li>
+                                <li>ERION DAO governance implementation</li>
+                                <li>Increased DeFi utility via cross-chain bridges</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="20px"
+                                viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+                                <path fill="#FFFFFF"
+                                    d="M17.92,3.065l-1.669-2.302c-0.336-0.464-0.87-0.75-1.479-0.755C14.732,0.008,7.653,0,7.653,0v5.6
+                                    c0,0.096-0.047,0.185-0.127,0.237c-0.081,0.052-0.181,0.06-0.268,0.02l-1.413-0.64C5.773,5.183,5.69,5.183,5.617,5.215l-1.489,0.65
+                                    c-0.087,0.038-0.19,0.029-0.271-0.023c-0.079-0.052-0.13-0.141-0.13-0.235V0H2.191C1.655,0,1.233,0.434,1.233,0.97
+                                    c0,0,0.025,15.952,0.031,15.993c0.084,0.509,0.379,0.962,0.811,1.242l2.334,1.528C4.671,19.905,4.974,20,5.286,20h10.307
+                                    c1.452,0,2.634-1.189,2.634-2.64V4.007C18.227,3.666,18.12,3.339,17.92,3.065z M16.42,17.36c0,0.464-0.361,0.833-0.827,0.833H5.341
+                                    l-1.675-1.089h10.341c0.537,0,0.953-0.44,0.953-0.979V2.039l1.459,2.027V17.36L16.42,17.36z" />
+                            </svg>
+                        </div>
+                        <!-- objects -->
+                        <div class="d-flex position-relative">
+                            <img class="position-absolute" src="images/slider/grid-3.svg" alt="">
+                        </div>
+                        <div class="timeline-content right">
+                            <h4>Phase 4 – Global Recognition (Q4 2025 & Beyond)</h4>
+                            <ul class="mt-3">
+                                <li>Institutional partnerships & real-world
+                                    adoption.</li>
+                                <li>Expansion into gaming & AI-driven DeFi
+                                    solutions.</li>
+                                <li>Full ecosystem scalability & enterprise
+                                    integrations.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TOKENOMICS? -->
+    <section class="container-fluid align-items-center meme-section" id="tokenomics">
+        <!-- objects -->
+        <div class="d-flex position-relative z-0">
+            <img class="position-absolute" src="images/slider/grid-6.png" alt="">
+        </div>
+        <!-- objects -->
+        <div class="d-flex position-relative z-0">
+            <img class="position-absolute infinite-rotate" src="images/slider/star.png" alt="" width="250">
+        </div>
+
+        <div class="container px-0">
+            <div class="row">
+                <div class="crypt-card card-transform-y text-bg-bonk p-4 p-sm-5">
+                    <div class="text-left">
+                        <h4 class="mb-3 crypt-grayscale-100">ERION Tokenomics ☞</h4>
+                        <h2 class="mt-4 big-text gd-text">1,000,000,000</h2>
+                        <p class="col-9 fs-5 mt-3 crypt-grayscale-300">
+                            Total supply with deflationary mechanics and auto-staking rewards
+                        </p>
+                    </div>
+                    <div class="container mt-5">
+                        <div class="progress" role="progressbar" aria-label="Token Distribution" aria-valuenow="100"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between slider-labels mt-3">
+                            <div class="col-xs-4 caption crypt-grayscale-500">
+                                <strong>Liquidity Pool:</strong> <span class="crypt-grayscale-100">40%</span>
+                            </div>
+                            <div class="col-xs-4 caption crypt-grayscale-500">
+                                <strong>Game Rewards:</strong> <span class="crypt-grayscale-100">30%</span>
+                            </div>
+                            <div class="col-xs-4 caption crypt-grayscale-500">
+                                <strong>Development:</strong> <span class="crypt-grayscale-100">30%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-4 mt-4">
+                        <div class="btns">
+                            <button class="brutal text-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Buy
+                                ERION</button>
+                            <button class="text-white text-link">View Contract ☞</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="container-fluid text-left text-lg-start crypt-footer bg5 border border-top-0 pt-3">
+
+        <!-- Newsletter! -->
+        <div class="container-fluid card meme-section color6 border-5x border-bottom-0 border-light">
+
+            <!-- objects -->
+            <div class="d-flex position-relative">
+                <img class="position-absolute z-0" src="images/slider/star.svg" alt="" width="250">
+            </div>
+            <!-- objects -->
+            <div class="d-flex justify-content-end position-relative">
+                <img class="position-absolute z-0" src="images/slider/map.svg" alt="" width="900">
+            </div>
+
+            <!-- content -->
+            <div class="d-sm-flex align-items-center justify-content-between px-3 px-sm-5">
+
+                <!-- intro -->
+                <div class="col-md-6 mb-5 pt-5">
+                    <div class="d-flex flex-column big-text mb-4">
+                        <h3 class=" text-uppercase text-dark mb-2 z-1">Join Our Newsletter! 🪂</h3>
+                        <p class="text-dark mt-2 z-1">
+                            Get updates, insights, and reports on the erion token.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- form -->
+                <div class="col-md-6 mb-5 pt-5">
+                    <div class="row newsletter-form newsletter text-center">
+                        <form>
+                            <input type="email" maxlength="50" id="exampleFormControlInput1" required
+                                placeholder="Enter your email address">
+                            <button id="element"
+                                class="btn btn-lg shiny-cta signup-btn text-uppercase">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- scroll trigger -->
+            <div class="mt-3 pb-2">
+                <div class="gsap-text meme card-bs circle py-2">
+                    <div class="scroll text3 dl-mode">
+                        <div>$ERION<span> Gaming 🎮 </span>Play to Earn<span> 🎮 </span>$ERION<span> Staking 💎
+                            </span>Auto-Rewards<span> 💎 </span>$ERION<span> Gaming 🎮 </span>Mobile Launch<span> 🎮
+                            </span>$ERION<span> Staking 💎 </span>Earn Rewards<span> 💎 </span>$ERION<span> Gaming 🎮
+                            </span>Q3 2025<span> 🎮 </span></div>
+                        <div>$ERION<span> Gaming 🎮 </span>Play to Earn<span> 🎮 </span>$ERION<span> Staking 💎
+                            </span>Auto-Rewards<span> 💎 </span>$ERION<span> Gaming 🎮 </span>Mobile Launch<span> 🎮
+                            </span>$ERION<span> Staking 💎 </span>Earn Rewards<span> 💎 </span>$ERION<span> Gaming 🎮
+                            </span>Q3 2025<span> 🎮 </span></div>
+                        <div>$ERION<span> Gaming 🎮 </span>Play to Earn<span> 🎮 </span>$ERION<span> Staking 💎
+                            </span>Auto-Rewards<span> 💎 </span>$ERION<span> Gaming 🎮 </span>Mobile Launch<span> 🎮
+                            </span>$ERION<span> Staking 💎 </span>Earn Rewards<span> 💎 </span>$ERION<span> Gaming 🎮
+                            </span>Q3 2025<span> 🎮 </span></div>
+                        <div>$ERION<span> Gaming 🎮 </span>Play to Earn<span> 🎮 </span>$ERION<span> Staking 💎
+                            </span>Auto-Rewards<span> 💎 </span>$ERION<span> Gaming 🎮 </span>Mobile Launch<span> 🎮
+                            </span>$ERION<span> Staking 💎 </span>Earn Rewards<span> 💎 </span>$ERION<span> Gaming 🎮
+                            </span>Q3 2025<span> 🎮 </span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container mt-5 in-view">
+
+            <!-- Link -->
+            <div class="row mt-5 pt-3">
+                <div class="col-12 col-sm-12 col-lg-4 pb-5">
+                    <!-- Content -->
+                    <div class="mb-4">
+                        <!-- Logo -->
+                        <div class="crypt-logo dark">
+                            <a href="#">
+                                <img src="assets/logo2.png" alt=""
+                                    style="width:250px !important;height:150px !important">
+                            </a>
+                        </div>
+                        <div class="crypt-logo light">
+                            <a href="#">
+                                <img src="assets/logo2.png" alt=""
+                                    style="width:250px !important;height:150px !important">
+                            </a>
+                        </div>
+                        <p class="card-text mt-2">Play, Earn, and Grow with ERION<br>The Future of Gaming</p>
+                    </div>
+                    <div class="text-left social-icons mt-4">
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="images/social/x.svg" alt="" width="24">
+                        </a>
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="images/social/facebook.svg" alt="" width="24">
+                        </a>
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="images/social/instagram.svg" alt="" width="24">
+                        </a>
+                        <a href="#" rel="nofollow" target="_blank">
+                            <img src="images/social/tiktok.svg" alt="" width="24">
+                        </a>
+                    </div>
+                </div>
+                <!-- Widgets -->
+                <div class="col-12 col-sm-12 col-lg-8">
+                    <div class="row">
+                        <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
+                            <!-- Links -->
+                            <h6 class="mb-3 crypt-grayscale-300">Token</h6>
+                            <p><a href="#tokenomics" class="text-reset">Tokenomics</a></p>
+                            <p><a href="#!" class="text-reset">Buy ERION</a></p>
+                            <p><a href="#!" class="text-reset">Staking</a></p>
+                            <p><a href="#!" class="text-reset">Whitepaper</a></p>
+                        </div>
+                        <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
+                            <!-- Links -->
+                            <h6 class="mb-3 crypt-grayscale-300">Gaming</h6>
+                            <p><a href="#!" class="text-reset">Mobile Game</a></p>
+                            <p><a href="#!" class="text-reset">Battle Arena</a></p>
+                            <p><a href="#!" class="text-reset">NFT Assets</a></p>
+                            <p><a href="#!" class="text-reset">Leaderboard</a></p>
+                        </div>
+                        <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
+                            <!-- Links -->
+                            <h6 class="mb-3 crypt-grayscale-300">Community</h6>
+                            <p><a href="#!" class="text-reset">Discord</a></p>
+                            <p><a href="#!" class="text-reset">Telegram</a></p>
+                            <p><a href="#!" class="text-reset">Blog</a></p>
+                            <p><a href="#!" class="text-reset">Support</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center p-4 mt-4 crypt-footer-copyright">
+                Copyright © 2025 - <a class="fw-bold link" href="https://tophivetheme.com/" rel="nofollow"
+                    target="_blank">Erion Token</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Main Content End -->
+
+    <script src="https://www.amcharts.com/lib/amcharts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
