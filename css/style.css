@@ -509,7 +509,7 @@ canvas#particleCanvas {
 
 /*--- Logo ---*/
 .crypt-logo img {
-    height: 78px !important;
+    height: 70px !important;
 }
 
 /* logo size */
@@ -551,7 +551,7 @@ canvas#particleCanvas {
         display: none;
     }
     .crypt-logo img {
-        height: 70px !important;
+        height: 71px !important;
     }
 }
 
