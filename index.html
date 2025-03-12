@@ -49,12 +49,14 @@
                 <!-- Logo -->
                 <div class="crypt-logo dark">
                     <a href="#home">
-                        <img src="assets/logo2.png" style="height:90px !important;width:100px">
+                        <img src="assets/logo2.png" class="responsive-logo">
+
+                       
                     </a>
                 </div>
                 <div class="crypt-logo light">
                     <a href="#home">
-                        <img src="assets/logo2.png" alt="" style="height:90px !important;width:100px">
+                        <img src="assets/logo2.png" alt="" class="responsive-logo">
                     </a>
                 </div>
 
@@ -190,145 +192,247 @@
 
 
             <!-- Assets -->
-            <div class="d-flex justify-content-center">
-                <div class="position-relative">
-
-                    <img class="position-absolute z-0 m-auto flying-falcon-main" src="assets/falc2.png" alt=""
-                        width="600">
+            <div class="hero-content-wrapper">
+                <!-- Falcon Image for Desktop -->
+                <div class="falcon-desktop">
+                    <img class="flying-falcon-main" src="assets/falc2.png" alt="Falcon">
                 </div>
-            </div>
 
-            <!-- Content -->
-            <div class="container pt-5 mt-5 mb-5 pb-5">
-                <div class="row card-text pt-5">
+                <!-- Content -->
+                <div class="text-content">
                     <h2 class="text-uppercase crypt-grayscale-100 fw-bold z-1">The</h2>
-                    <style>
-                        @font-face {
-                            font-family: 'Space Game';
-                            src: url('assets/spacefont/space/space-game.ttf') format('truetype'),
-                                url('assets/spacefont/space/new-space.otf') format('opentype');
-                            font-weight: normal;
-                            font-style: normal;
-                            font-display: swap;
-                        }
-                    </style>
-                    <h3
-                        class="text-xl text-uppercase fs-bolder gd-text1 z-1 d-flex align-items-center bounce-text fw-bolder responsive-title">
+                    
+                    
+                    <h3 class="text-xl text-uppercase fs-bolder gd-text1 z-1 d-flex align-items-center bounce-text fw-bolder responsive-title">
                         Erion Token
                     </h3>
-
-                    <style>
-                        .responsive-title {
-                            font-family: 'Montserrat', sans-serif !important;
-                            font-size: 100px !important;
-                        }
-
-                        @media (max-width: 1200px) {
-                            .responsive-title {
-                                font-size: 80px !important;
-                            }
-                        }
-
-                        @media (max-width: 992px) {
-                            .responsive-title {
-                                font-size: 75px !important;
-                                justify-content: center;
-                            }
-                        }
-
-                        @media (max-width: 768px) {
-                            .responsive-title {
-                                font-size: 75px !important;
-                                justify-content: center;
-                            }
-                        }
-
-                        @media (max-width: 576px) {
-                            .responsive-title {
-                                font-size: 75px !important;
-
-                                justify-content: center;
-                            }
-                        }
-                    </style>
-                    <!-- <span class="logo-o"><img src="assets/logo3.png" alt="O" class="spinning-logo"></span> -->
-
-                    <style>
-                        .logo-o {
-                            display: inline-flex;
-                            align-items: center;
-                            justify-content: center;
-                            position: relative;
-                            width: 1em;
-                            height: 1em;
-                            margin: 0 0.1em;
-                        }
-
-                        .spinning-logo {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: contain;
-                            animation: spinLogo 4s linear infinite;
-                        }
-
-                        @keyframes spinLogo {
-                            from {
-                                transform: rotate(0deg);
-                            }
-
-                            to {
-                                transform: rotate(360deg);
-                            }
-                        }
-                    </style>
-
-
                     <h3 class="col-md-8 crypt-grayscale-100 z-1">Built on the Ethereum ERC-20 standard, combining
                         strategic deflationary mechanics and real-world integrations.</h3>
 
+                    <!-- Falcon Image for Mobile -->
+                    <div class="falcon-mobile">
+                        <img class="flying-falcon-main" src="assets/falc2.png" alt="Falcon">
+                    </div>
 
                     <div class="d-flex mt-3">
                         <div class="d-sm-flex flex-sm-row card align-items-center gap-3 text-bg-dark">
-                            <button class="btn btn-lg shiny-cta signup-btn text-uppercase">Mobile Game Launching
-                                soon!</button>
+                            <button class="btn btn-lg shiny-cta signup-btn text-uppercase">Mobile Game Launching soon!</button>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <style>
+                .hero-content-wrapper {
+                    position: relative;
+                    display: flex;
+                    padding: 4rem 2rem;
+                    max-width: 1400px;
+                    margin: 0 auto;
+                }
+
+                .text-content {
+                    flex: 1;
+                    z-index: 2;
+                }
+
+                .falcon-desktop {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 600px;
+                    z-index: 1;
+                }
+
+                .falcon-mobile {
+                    display: none;
+                    margin: 2rem 0;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .falcon-mobile img {
+                    max-width: 300px;
+                    margin: 0 auto;
+                }
+
+                @media (max-width: 768px) {
+                    .hero-content-wrapper {
+                        flex-direction: column;
+                        padding: 2rem 1rem;
+                    }
+
+                    .falcon-desktop {
+                        display: none;
+                    }
+
+                    .falcon-mobile {
+                        display: block;
+                    }
+
+                    .text-content {
+                        text-align: center;
+                    }
+
+                    .text-content h3.col-md-8 {
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                }
+
+                .flying-falcon-main {
+                    width: 100%;
+                    height: auto;
+                    animation: hoverInPlace 4s ease-in-out infinite;
+                }
+            </style>
+
             <!-- Features -->
             <div class="container section-1600x">
-                <div class="row">
-                    <div class="d-sm-flex px-0 justify-content-between">
-                        <div class="col-md-4 mb-4 g-2 card feature-card border-0 rounded m-2">
-                            <div class="card-body">
-                                <h4 class="card-title mb-2 text-center">Dynamic Supply Reduction</h4>
-                                <h1 class="card-title feature-heading mt-4 mb-2 text-center">Burn</h1>
-                                <p class="card-text text-center">
-                                    A percentage of every transaction is burned to ensure scarcity
-                                </p>
+               
+                <div class="row features-section">
+                    <div class="col-12 text-center mb-5">
+                        <h2 style=" font-size: 40px;
+                        font-weight: 700;
+                        background: linear-gradient(to right, #FFD700, #FFA500);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-family: 'Orbitron', sans-serif;">Core Features</h2>
+                       
+                        <div class="title-underline"></div>
+                    </div>
+                    <div class="features-container">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-fire-alt"></i>
                             </div>
+                            <h3 class="text-white">Token Burn</h3>
+                            <h4>Dynamic Supply Reduction</h4>
+                            <p>A percentage of every transaction is burned to ensure scarcity</p>
                         </div>
-                        <div class="col-md-4 mb-4 g-2 card feature-card border-0 rounded m-2">
-                            <div class="card-body">
-                                <h3 class="card-title mb-2 text-center">Auto-Staking</h3>
-                                <h1 class="card-title feature-heading mt-4 mb-2 text-center">Yield</h1>
-                                <p class="card-text text-center">
-                                    Holders earn additional tokens through compounding staking mechanism
-                                </p>
+
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
                             </div>
+                            <h3 class="text-white">Auto-Staking</h3>
+                            <h4>Passive Yield</h4>
+                            <p>Earn additional tokens through our compounding staking system</p>
                         </div>
-                        <div class="col-md-4 mb-4 g-2 card feature-card border-0 rounded m-2">
-                            <div class="card-body">
-                                <h3 class="card-title mb-2 text-center">Liquidity</h3>
-                                <h1 class="card-title feature-heading mt-4 mb-2 text-center">Stable</h1>
-                                <p class="card-text text-center">
-                                    A portion of fees is allocated to the liquidity pool for market stability
-                                </p>
+
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
                             </div>
+                            <h3 class="text-white">Liquidity</h3>
+                            <h4>Market Stability</h4>
+                            <p>Dedicated liquidity pool ensures stable trading environment</p>
                         </div>
                     </div>
                 </div>
+
+                <style>
+                    .features-section {
+                        padding: 4rem 0;
+                        background: linear-gradient(145deg, rgba(10,10,26,0.8) 0%, rgba(26,26,58,0.8) 100%);
+                        border-radius: 20px;
+                    }
+
+                    .features-title {
+                        color: #FFD700;
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        margin-bottom: 1rem;
+                    }
+
+                    .title-underline {
+                        width: 80px;
+                        height: 4px;
+                        background: linear-gradient(90deg, #FFD700, #FFA500);
+                        margin: 0 auto;
+                        border-radius: 2px;
+                    }
+
+                    .features-container {
+                        display: flex;
+                        justify-content: center;
+                        gap: 2rem;
+                        flex-wrap: wrap;
+                        padding: 0 2rem;
+                    }
+
+                    .feature-box {
+                        flex: 1;
+                        /* min-width: 280px; */
+                        max-width: 350px;
+                        background: rgba(0, 0, 0, 0.3);
+                        padding: 1rem;
+                        border-radius: 15px;
+                        text-align: center;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        border: 1px solid rgba(255, 215, 0, 0.1);
+                    }
+
+                    .feature-box:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+                        border-color: rgba(255, 215, 0, 0.3);
+                    }
+
+                    .feature-icon {
+                        width: 70px;
+                        height: 70px;
+                        margin: 0 auto 1.5rem;
+                        background: linear-gradient(135deg, #FFD700, #FFA500);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .feature-icon i {
+                        font-size: 1.8rem;
+                        color: #000;
+                    }
+
+                    .feature-box h3 {
+                        color: #FFD700;
+                        font-size: 1.5rem;
+                        margin-bottom: 0.5rem;
+                        font-weight: 600;
+                    }
+
+                    .feature-box h4 {
+                        color: #FFA500;
+                        font-size: 1rem;
+                        margin-bottom: 1rem;
+                        font-weight: 500;
+                        opacity: 0.9;
+                    }
+
+                    .feature-box p {
+                        color: #fff;
+                        font-size: 0.9rem;
+                        line-height: 1.6;
+                        margin: 0;
+                        opacity: 0.8;
+                    }
+
+                    @media (max-width: 768px) {
+                        .features-container {
+                            flex-direction: column;
+                            align-items: center;
+                        }
+
+                        .feature-box {
+                            width: 100%;
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                </style>
             </div>
 
 
@@ -342,9 +446,17 @@
         <div class="wrapper wow">
             <div id="big-text" class="wow bounceInDown text-center game-hero-text" data-wow-delay="1.5s">
                 <div class="hero-content">
-                    <h1 class="mega-title">
+                    <!-- <h1 class="mega-title">
                         <span class="line-1">UNLEASH THE POWER</span>
                         <span class="line-2">OF THE FALCON</span>
+                    </h1> -->
+                    <h1 style=" font-size: 50px;
+                        font-weight: 700;
+                        background: linear-gradient(to right, #FFD700, #FFA500);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-family: 'Orbitron', sans-serif;">UNLEASH THE POWER OF THE FALCON
+                      
                     </h1>
                     <p class="hero-subtitle">
                         <span class="typing-text">BATTLE <span style='color: #FFD700'>|</span> EARN <span
@@ -364,8 +476,8 @@
                 <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="falconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                            <stop offset="0%" style="stop-color:#FFF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFF;stop-opacity:1" />
                         </linearGradient>
                         <filter id="glow">
                             <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -426,8 +538,8 @@
                 <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="falconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+                            <stop offset="0%" style="stop-color:#FFF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFF;stop-opacity:1" />
                         </linearGradient>
                         <filter id="glow">
                             <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -1111,23 +1223,82 @@
                             Get updates, insights, and reports on the erion token.
                         </p>
 
+                        <div class="newsletter-form-container">
+                            <form class="glowing-form" id="newsletterForm">
+                                <input class="newsletter-input" type="email" maxlength="50" required
+                                    placeholder="Enter your email address" id="newsletterEmail" />
+                                <button type="submit" class="newsletter-btn">Subscribe</button>
+                            </form>
+                            <div id="newsletterMessage" class="mt-2 text-center"></div>
+                        </div>
+
                     </div>
                 </div>
 
                 <!-- enhanced form -->
                 <div class="col-md-6 mb-5 pt-5">
-                    <div class="newsletter-form-container">
-                        <form class="glowing-form" id="newsletterForm">
-                            <input class="newsletter-input" type="email" maxlength="50" required
-                                placeholder="Enter your email address" id="newsletterEmail" />
-                            <button type="submit" class="newsletter-btn">Subscribe</button>
-                        </form>
-                        <div id="newsletterMessage" class="mt-2 text-center"></div>
+                    <div class="card p-4">
+                        <div class="d-sm-flex justify-content-between align-items-center mb-3">
+                            <h3 class="fw-medium crypt-grayscale-100">FAQ</h3>
+                            <p class="fw-medium crypt-grayscale-300">Didn't find the answer? <a href="mailto:support@eriontoken.com" class="link-info">Ask a question</a></p>
+                        </div>
+                        <div class="accordion in-view">
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="headingOne">
+                                    <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What is ERION Token?
+                                    </button>
+                                </div>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        An ERC-20 token combining gaming utility, auto-staking rewards, and dynamic supply reduction through burns.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How does auto-staking work?
+                                    </button>
+                                </div>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Simply hold ERION in your wallet to earn automatic staking rewards. No locking or manual staking required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="headingThree">
+                                    <button class="accordion-button fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        What's the Play-to-Earn game?
+                                    </button>
+                                </div>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        A mobile battle arena game where players compete and earn ERION tokens through gameplay and tournaments.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="headingFour">
+                                    <button class="accordion-button fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        When is the launch?
+                                    </button>
+                                </div>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        ERION token launches in Q1 2025, with the mobile game following in Q3 2025.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
             </div>
+
+           
 
 
             <!-- Enhanced marquee -->
@@ -1145,69 +1316,130 @@
         <div class="container mt-5 in-view">
 
             <!-- Link -->
-            <div class="row mt-5 pt-3">
-                <div class="col-12 col-sm-12 col-lg-4 pb-5">
-                    <!-- Content -->
-                    <div class="mb-4">
-                        <!-- Logo -->
-                        <div class="crypt-logo dark">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <!-- Logo and Text Section -->
+                    <div class="footer-brand">
+                        <div class="footer-logo">
                             <a href="#">
-                                <img src="assets/logo2.png" alt=""
-                                    style="width:100px !important;height:90px !important">
+                                <img src="assets/logo2.png" alt="ERION Logo" class="footer-logo-img">
                             </a>
                         </div>
-                        <div class="crypt-logo light">
-                            <a href="#">
-                                <img src="assets/logo2.png" alt=""
-                                    style="width:100px !important;height:90px !important">
-                            </a>
-                        </div>
-                        <p class="card-text mt-2">Play, Earn, and Grow with ERION<br>The Future of Gaming</p>
+                        <p class="footer-tagline">Play, Earn, and Grow with ERION<br>The Future of Gaming</p>
                     </div>
-                    <div class="text-left social-icons mt-4">
-                        <a href="https://x.com/erioncoin?s=21" rel="nofollow" target="_blank">
-                            <img src="images/social/x.svg" alt="" width="24">
+
+                    <!-- Social Media Links -->
+                    <div class="footer-social">
+                        <a href="https://x.com/erioncoin?s=21" rel="nofollow" target="_blank" class="social-link">
+                            <img src="images/social/x.svg" alt="X (Twitter)" width="24">
                         </a>
-                        <a href="https://t.me/TRP_Community" rel="nofollow" target="_blank">
-                            <i class="fab fa-telegram fa-xl" style="color: #ffffff; background: transparent;"></i>
+                        <a href="https://t.me/TRP_Community" rel="nofollow" target="_blank" class="social-link">
+                            <i class="fab fa-telegram fa-xl"></i>
                         </a>
-                        
-                        <a href="#" rel="nofollow" target="_blank">
-                            <img src="images/social/instagram.svg" alt="" width="24">
+                        <a href="#" rel="nofollow" target="_blank" class="social-link">
+                            <img src="images/social/instagram.svg" alt="Instagram" width="24">
                         </a>
                     </div>
                 </div>
-                <!-- Widgets -->
-                <div class="col-12 col-sm-12 col-lg-8">
-                    <div class="row">
-                        <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
-                            <!-- Links -->
-                            <h6 class="mb-3 crypt-grayscale-300">Token</h6>
-                            <p><a href="#about" class="text-reset">Tokenomics</a></p>
-                            <p><a href="#!" class="text-reset">Buy ERION</a></p>
-                            <p><a href="#!" class="text-reset">Staking</a></p>
-                            <p><a href="assets/whitepaper.pdf" class="text-reset">Whitepaper</a></p>
-                        </div>
-                        <div class="col-6 col-md-3 col-sm-6 col-lg-3 text-link mb-3">
-                            <!-- Links -->
-                            <h6 class="mb-3 crypt-grayscale-300">Gaming</h6>
-                            <p><a href="#!" class="text-reset">Mobile Game</a></p>
-                            <p><a href="#!" class="text-reset">Battle Arena</a></p>
-                            <p><a href="#!" class="text-reset">NFT Assets</a></p>
-                            <p><a href="#!" class="text-reset">Leaderboard</a></p>
-                            <p><a href="mailto:support@eriontoken.com" class="text-reset">Support</a></p>
 
-                        </div>
-
-                    </div>
+                <!-- Copyright -->
+                <div class="footer-copyright">
+                    Copyright © 2025 - <a href="#" class="copyright-link">Erion Token</a>
                 </div>
             </div>
 
-            <!-- Copyright -->
-            <div class="text-center p-4 mt-4 crypt-footer-copyright">
-                Copyright © 2025 - <a style="color:#FFA500" class="fw-bold link text-gold"
-                    href="https://tophivetheme.com/" rel="nofollow" target="_blank">Erion Token</a>
-            </div>
+            <style>
+                .footer-content {
+                    padding: 3rem 1rem;
+                    text-align: center;
+                    background: rgba(0, 0, 0, 0.3);
+                    border-top: 1px solid rgba(255, 215, 0, 0.1);
+                }
+
+                .footer-main {
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+
+                .footer-brand {
+                    margin-bottom: 2rem;
+                }
+
+                .footer-logo {
+                    margin-bottom: 1.5rem;
+                }
+
+                .footer-logo-img {
+                    width: 100px;
+                    height: 90px;
+                    transition: transform 0.3s ease;
+                }
+
+                .footer-logo-img:hover {
+                    transform: scale(1.1);
+                }
+
+                .footer-tagline {
+                    color: #fff;
+                    font-size: 1.1rem;
+                    opacity: 0.9;
+                    margin: 0;
+                    line-height: 1.6;
+                }
+
+                .footer-social {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1.5rem;
+                    margin-bottom: 2rem;
+                }
+
+                .social-link {
+                    padding: 0.5rem;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+
+                .social-link:hover {
+                    background: rgba(255, 215, 0, 0.2);
+                    transform: translateY(-3px);
+                }
+
+                .social-link i {
+                    color: #ffffff;
+                }
+
+                .footer-copyright {
+                    color: #ffffff;
+                    opacity: 0.7;
+                    font-size: 0.9rem;
+                    padding-top: 2rem;
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                }
+
+                .copyright-link {
+                    color: #FFD700;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+
+                .copyright-link:hover {
+                    color: #FFA500;
+                }
+
+                @media (max-width: 768px) {
+                    .footer-content {
+                        padding: 2rem 1rem;
+                    }
+
+                    .footer-tagline {
+                        font-size: 1rem;
+                    }
+                }
+            </style>
+
+            
 
         </div>
 

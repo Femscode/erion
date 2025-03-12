@@ -287,8 +287,9 @@ a {
         line-height: 54px;
     }
     h3 {
-        font-size: 1.8rem;
-        line-height: 38px;
+        font-size: 1.2rem;
+        line-height: 25px;
+        font-family: "Montserrat", sans-serif !important;
     }
     h4 {
         font-size: 1.4rem;
@@ -542,7 +543,7 @@ canvas#particleCanvas {
         display: none;
     }
     .crypt-logo img {
-        height: 26px !important;
+        height: 70px !important;
     }
 }
 @media screen and (max-width: 800px) {
@@ -550,7 +551,7 @@ canvas#particleCanvas {
         display: none;
     }
     .crypt-logo img {
-        height: 26px !important;
+        height: 70px !important;
     }
 }
 
@@ -2108,6 +2109,7 @@ table th {
     font-weight: 500 !important;
     line-height: 32px;
 }
+
 .meme-section .modal-body a {
     color: var(--color-primary-100);
     font-family: "Montserrat", sans-serif;
@@ -2755,7 +2757,7 @@ applyed all content deployed from section*/
         line-height: 44px;
     }
     .meme-section h2 {
-        font-size: 50px !important;
+        font-size: 40px !important;
         line-height: 56px;
     }
     .pepe-hero h2 {
@@ -3460,6 +3462,9 @@ applyed all content deployed from section*/
   background: var(--color-data-up);
   margin: -20px -20px 0 -20px;
   font-weight: 300;
+
+  font-size: 25px;
+  font-family: 'Montserrat' !important;
   border-radius: 8px 8px 0 0 !important;
 }
 #timeline .timeline-item .timeline-content:before {
@@ -4269,6 +4274,7 @@ body .text-sm {
     font-size: 40px;
     font-weight: 900;
 }
+
 .progress,
 .progress-stacked {
     --bs-progress-height: 16px;
@@ -4293,6 +4299,7 @@ body .text-sm {
     content: "";
 }
 @media only screen and (max-width: 1100px) {
+    
     .cupons {
         height: 100%;
         border-radius: 0px 8px 8px 0px;
@@ -4450,5 +4457,14 @@ body .text-sm {
     #fourth {
         order: 4;
     }
+
+    .meme-section P {
+        color: var(--color-primary-100);
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        font-weight: 500 !important;
+        line-height: 22px;
+    }
+    
 }
 
