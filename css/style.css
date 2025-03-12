@@ -509,7 +509,7 @@ canvas#particleCanvas {
 
 /*--- Logo ---*/
 .crypt-logo img {
-    height: 28px !important;
+    height: 78px !important;
 }
 
 /* logo size */
@@ -2245,6 +2245,7 @@ table th {
 }
 .gorditas h2 {
     font-family: var(--font-1);
+    text-align:left;
 }
 .gorditas h3 {
     font-family: var(--font-1);

@@ -866,7 +866,7 @@
     @media (max-width: 576px) {
         .responsive-title {
             font-size: 75px !important;
-
+            text-align:left;
             justify-content: center;
         }
     }
