@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Erion Token | Home</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/gsap.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/main2.css">
+    <link rel="icon" type="image/svg" href="assets/logo2.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Russo+One&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="crypt-dark section-dark font-set-1">
+    <!-- Hero/Header -->
+    <section class="container-fluid crypt-hero slider-3" id="home">
+        <!-- Header -->
+        <header class="header-boxed border-bottom-0 fixed-top mt-2">
+            <div class="d-flex flex-row justify-content-between align-items-center">
+                <!-- Logo -->
+                <div class="crypt-logo dark">
+                    <a href="#home">
+                        <img src="assets/logo2.png" class="responsive-logo">
+                    </a>
+                </div>
+                <div class="crypt-logo light">
+                    <a href="#home">
+                        <img src="assets/logo2.png" alt="" class="responsive-logo">
+                    </a>
+                </div>
+                <!-- Menu -->
+                <div class="crypt-card hidesmscreen py-2 px-4">
+                    <div class="d-flex gap-5 fs-6 align-items-center px-0 p-1 m-0">
+                        <div class="dropdown nav-item profile_menu">
+                            <a class="nav-item text-link fw-bold text-uppercase crypt-grayscale-100 crypto-has-dropdown"
+                                href="#">Home</a>
+                        </div>
+                        <a class="nav-item text-link fw-bold text-uppercase crypt-grayscale-100" href="#about">About</a>
+                        <a class="nav-item text-link fw-bold text-uppercase crypt-grayscale-100" href="#game">Game</a>
+                        <a class="nav-item text-link fw-bold text-uppercase crypt-grayscale-100" href="#roadmap">Roadmap</a>
+                        <a class="nav-item text-link fw-bold text-uppercase crypt-grayscale-100" href="#tokenomics">Tokenomics</a>
+                    </div>
+                </div>
+                <!-- Navigation menu / Button -->
+                <div class="col-auto d-flex flex-row align-items-center">
+                    <div class="user-settings gap-2 gap-sm-3">
+                        <div class="flex">
+                            <a class="btn-meme py-1 px-2 responsive-btn" href="assets/whitepaper.pdf"
+                                download="ERION_Whitepaper.pdf">Download Whitepaper</a>
+                        </div>
+                        <div id="mobile_menu" class="close meme-nav meme-card">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                                <svg class="me-0" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M4 6H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Offcanvas Navbar -->
+        <nav class="navbar py-0 navbar-dark bg-dark">
+            <div class="container-fluid">
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar">
+                    <div class="offcanvas-header card-line">
+                        <div class="d-flex align-items-center gap-3 crypt-grayscale-100 text-uppercase mb-0"></div>
+                        <button type="button"
+                            class="btn-close text-reset close-notify align-items-center justify-content-center"
+                            data-bs-dismiss="offcanvas" aria-label="Close">
+                            <svg class="close-notify" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.5 4.5L4.5 13.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.5 4.5L13.5 13.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="offcanvas-body meme-section card-bs gd-bg">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 gap-2 mt-3 pb-3">
+                            <li><a style="font-family: 'Montserrat';" class="nav-link h4" href="#home">Home</a></li>
+                            <li><a style="font-family: 'Montserrat';" class="nav-link h4" href="#about">About</a></li>
+                            <li><a style="font-family: 'Montserrat';" class="nav-link h4" href="#game">Game</a></li>
+                            <li><a style="font-family: 'Montserrat';" class="nav-link h4"
+                                    href="/assets/whitepaper.pdf">Whitepaper</a></li>
+                            <li><a style="font-family: 'Montserrat';" class="nav-link h4" href="#roadmap">Roadmap</a></li>
+                            <li><a style="font-family: 'Montserrat';" class="nav-link h4"
+                                    href="mailto:info@eriontoken.com">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Hero -->
+        <div class="container-fluid game-hero rounded align-items-center">
+            <div class="hero-background">
+                <div class="cartoon-sky"></div>
+                <div class="cloud-layer cloud-1"></div>
+                <div class="cloud-layer cloud-2"></div>
+            </div>
+            <div class="hero-content-wrapper mt-4">
+                <div class="cartoon-falcon">
+                    <img class="hero-falcon" src="assets/cartoon_falcon.png" alt="Cartoon Falcon">
+                </div>
+                <div class="text-content">
+                    <h1 class="game-title text-uppercase z-1">Erion: Falcon's Battle</h1>
+                    <h2 class="game-subtitle z-1">Soar, Battle, Earn in the Ultimate Adventure!</h2>
+                    <p class="game-description col-md-8 z-1">Unleash your NFT falcons in epic mobile battles. Collect, trade, and dominate to earn ERION tokens!</p>
+                    <div class="d-flex mt-4">
+                        <a href="#newsletterForm" class="btn btn-lg game-cta text-uppercase">Join the Battle</a>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+    
+                .game-hero {
+                    position: relative;
+                    min-height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                    background: linear-gradient(180deg, #1a1a3a 0%, #0a0a1a 100%);
+                }
+                .hero-background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 0;
+                }
+                .cartoon-sky {
+                    background: url('assets/cartoon_sky.jpg') no-repeat center center/cover;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.9;
+                    animation: skyFade 10s infinite alternate;
+                }
+                .cloud-layer {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    animation: cloudMove 30s linear infinite;
+                }
+                .cloud-1 {
+                    background: url('assets/cloud1.png') repeat-x;
+                    top: 20%;
+                    animation-duration: 25s;
+                }
+                .cloud-2 {
+                    background: url('assets/cloud2.png') repeat-x;
+                    top: 50%;
+                    animation-duration: 35s;
+                    animation-direction: reverse;
+                }
+                .hero-content-wrapper {
+                    position: relative;
+                    display: flex;
+                    padding: 5rem 2rem;
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    z-index: 2;
+                }
+                .text-content {
+                    flex: 1;
+                    text-align: left;
+                }
+                .game-title {
+                    font-family: 'Bungee', sans-serif;
+                    font-size: 5rem;
+                    color: #FFD700;
+                    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 3px 3px 0 #FFA500;
+                    animation: glowText 2s ease-in-out infinite alternate;
+                    margin-bottom: 1rem;
+                }
+                .game-subtitle {
+                    font-family: 'Bungee', sans-serif;
+                    font-size: 2.5rem;
+                    color: #ffffff;
+                    text-shadow: 1px 1px 0 #FFD700;
+                    margin-bottom: 1.5rem;
+                }
+                .game-description {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 1.2rem;
+                    color: #ffffff;
+                    opacity: 0.9;
+                    line-height: 1.6;
+                }
+                .game-cta {
+                    background: linear-gradient(135deg, #FFD700, #FFA500);
+                    color: #000;
+                    font-family: 'Bungee', sans-serif;
+                    font-size: 1.2rem;
+                    padding: 0.8rem 2rem;
+                    border: 3px solid #ffffff;
+                    border-radius: 10px;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                .game-cta:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+                }
+                .cartoon-falcon {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 500px;
+                    z-index: 1;
+                }
+                .hero-falcon {
+                    width: 100%;
+                    height: auto;
+                    animation: falconFlap 3s ease-in-out infinite;
+                    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+                }
+                @media (max-width: 992px) {
+                    .game-title {
+                        font-size: 3.5rem;
+                    }
+                    .game-subtitle {
+                        font-size: 1.8rem;
+                    }
+                    .cartoon-falcon {
+                        width: 400px;
+                    }
+                }
+                @media (max-width: 768px) {
+                    .hero-content-wrapper {
+                        flex-direction: column;
+                        padding: 3rem 1rem;
+                        text-align: center;
+                    }
+                    .text-content {
+                        text-align: center;
+                    }
+                    .game-description {
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                    .cartoon-falcon {
+                        position: static;
+                        transform: none;
+                        width: 300px;
+                        margin: 2rem auto;
+                    }
+                    .game-title {
+                        font-size: 2.5rem;
+                    }
+                    .game-subtitle {
+                        font-size: 1.5rem;
+                    }
+                }
+                @keyframes skyFade {
+                    0% { opacity: 0.9; }
+                    100% { opacity: 0.7; }
+                }
+                @keyframes cloudMove {
+                    0% { background-position: 0 0; }
+                    100% { background-position: 2000px 0; }
+                }
+                @keyframes glowText {
+                    0% { text-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 3px 3px 0 #FFA500; }
+                    100% { text-shadow: 0 0 25px rgba(255, 215, 0, 1), 5px 5px 0 #FFA500; }
+                }
+                @keyframes falconFlap {
+                    0%, 100% { transform: translateY(0) rotate(0deg); }
+                    50% { transform: translateY(-20px) rotate(5deg); }
+                }
+            </style>
+         
+        </div>
+    </section>
+    <section class="sky-section">
+        <div class="wrapper wow">
+            <div id="big-text" class="wow bounceInDown text-center game-hero-text" data-wow-delay="1.5s">
+                <div class="hero-content">
+                    <h1 style="font-size: 50px; font-weight: 700; background: linear-gradient(to right, #FFD700, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron', sans-serif;">UNLEASH THE POWER OF THE FALCON</h1>
+                    <p class="hero-subtitle">
+                        <span class="typing-text">BATTLE <span style='color: #FFD700'>|</span> EARN <span style='color: #FFD700'>|</span> DOMINATE</span>
+                    </p>
+                </div>
+            </div>
+            <div id="texture" class="bg-image" data-bg-image="assets/texture.png"></div>
+            <div id="clouds"></div>
+            <div class="flying-falcon falcon-1">
+                <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="falconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFF;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                            <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path d="M350 200 C370 180, 390 170, 410 175 C430 180, 440 190, 445 210 C450 230, 445 250, 435 265 L420 280 C410 290, 390 295, 370 290 C350 285, 340 275, 335 260 C330 245, 335 220, 350 200 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="2"></path>
+                    <path d="M445 210 L470 220 C480 225, 485 230, 480 235 L460 240 L445 210 Z" fill="#FFD700" stroke="#FFA500" stroke-width="1"></path>
+                    <circle cx="400" cy="220" r="5" fill="#FFF" />
+                    <circle cx="400" cy="220" r="2" fill="#000" />
+                    <path class="feather" d="M300 250 Q320 230, 340 220 Q360 210, 380 215 Q350 230, 330 250 Q310 270, 300 250 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="1">
+                        <animateTransform attributeName="transform" type="rotate" from="0 340 235" to="360 340 235" dur="4s" repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
+                    </path>
+                    <path class="feather-small" d="M280 280 Q290 270, 300 265 Q310 260, 320 262 Q305 270, 295 280 Q285 290, 280 280 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="1">
+                        <animateTransform attributeName="transform" type="rotate" from="0 300 272" to="-360 300 272" dur="3s" repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" />
+                    </path>
+                </svg>
+            </div>
+            <div class="flying-falcon falcon-2">
+                <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="falconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFF;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                            <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path d="M350 200 C370 180, 390 170, 410 175 C430 180, 440 190, 445 210 C450 230, 445 250, 435 265 L420 280 C410 290, 390 295, 370 290 C350 285, 340 275, 335 260 C330 245, 335 220, 350 200 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="2"></path>
+                    <path d="M445 210 L470 220 C480 225, 485 230, 480 235 L460 240 L445 210 Z" fill="#FFD700" stroke="#FFA500" stroke-width="1"></path>
+                    <circle cx="400" cy="220" r="5" fill="#FFF" />
+                    <circle cx="400" cy="220" r="2" fill="#000" />
+                    <path class="feather" d="M300 250 Q320 230, 340 220 Q360 210, 380 215 Q350 230, 330 250 Q310 270, 300 250 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="1">
+                        <animateTransform attributeName="transform" type="rotate" from="0 340 235" to="360 340 235" dur="4s" repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
+                    </path>
+                    <path class="feather-small" d="M280 280 Q290 270, 300 265 Q310 260, 320 262 Q305 270, 295 280 Q285 290, 280 280 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="1">
+                        <animateTransform attributeName="transform" type="rotate" from="0 300 272" to="-360 300 272" dur="3s" repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" />
+                    </path>
+                </svg>
+            </div>
+            <div class="flying-falcon falcon-3">
+                <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="falconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#fff;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                            <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path d="M350 200 C370 180, 390 170, 410 175 C430 180, 440 190, 445 210 C450 230, 445 250, 435 265 L420 280 C410 290, 390 295, 370 290 C350 285, 340 275, 335 260 C330 245, 335 220, 350 200 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="2"></path>
+                    <path d="M445 210 L470 220 C480 225, 485 230, 480 235 L460 240 L445 210 Z" fill="#FFD700" stroke="#FFA500" stroke-width="1"></path>
+                    <circle cx="400" cy="220" r="5" fill="#FFF" />
+                    <circle cx="400" cy="220" r="2" fill="#000" />
+                    <path class="feather" d="M300 250 Q320 230, 340 220 Q360 210, 380 215 Q350 230, 330 250 Q310 270, 300 250 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="1">
+                        <animateTransform attributeName="transform" type="rotate" from="0 340 235" to="360 340 235" dur="4s" repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
+                    </path>
+                    <path class="feather-small" d="M280 280 Q290 270, 300 265 Q310 260, 320 262 Q305 270, 295 280 Q285 290, 280 280 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="1">
+                        <animateTransform attributeName="transform" type="rotate" from="0 300 272" to="-360 300 272" dur="3s" repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" />
+                    </path>
+                </svg>
+            </div>
+            <div class="flying-falcon falcon-4">
+                <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="falconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#fff;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                            <feMerge>
+                                <feMergeNode in="coloredBlur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path d="M350 200 C370 180, 390 170, 410 175 C430 180, 440 190, 445 210 C450 230, 445 250, 435 265 L420 280 C410 290, 390 295, 370 290 C350 285, 340 275, 335 260 C330 245, 335 220, 350 200 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="2"></path>
+                    <path d="M445 210 L470 220 C480 225, 485 230, 480 235 L460 240 L445 210 Z" fill="#FFD700" stroke="#FFA500" stroke-width="1"></path>
+                    <circle cx="400" cy="220" r="5" fill="#FFF" />
+                    <circle cx="400" cy="220" r="2" fill="#000" />
+                    <path class="feather" d="M300 250 Q320 230, 340 220 Q360 210, 380 215 Q350 230, 330 250 Q310 270, 300 250 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="1">
+                        <animateTransform attributeName="transform" type="rotate" from="0 340 235" to="360 340 235" dur="4s" repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
+                    </path>
+                    <path class="feather-small" d="M280 280 Q290 270, 300 265 Q310 260, 320 262 Q305 270, 295 280 Q285 290, 280 280 Z" fill="url(#falconGradient)" filter="url(#glow)" stroke="#FFD700" stroke-width="1">
+                        <animateTransform attributeName="transform" type="rotate" from="0 300 272" to="-360 300 272" dur="3s" repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" />
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="container-fluid align-items-center meme-section pb-5 mt-4" id="about">
+        <div class="flex position-relative">
+            <img class="position-absolute" src="images/slider/star.svg" alt="">
+        </div>
+        <div class="container meme-section crypt-card justify-content-center text-bg-dark p-4" style="border:1px solid #FFD700">
+            <div class="d-sm-flex align-items-center">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-7 p-2 p-sm-5">
+                    <div class="text-left">
+                        <h2 style="font-size: 60px; font-weight: 700; background: linear-gradient(to right, #FFD700, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron', sans-serif;">About ERION</h2>
+                        <p class="crypt-grayscale-400 mt-3">A revolutionary gaming token that combines Play-to-Earn mechanics with sustainable tokenomics and real-world utility.</p>
+                    </div>
+                    <div class="d-flex flex-row gap-2 align-items-center">
+                        <img class="grayscale-item gold-icon" alt="" style="width:32px;" src="images/icon/check-fill.svg">
+                        <p class="fs-5 mb-0">Auto-Staking Rewards System</p>
+                    </div>
+                    <div class="d-flex flex-row gap-2 align-items-center">
+                        <img class="grayscale-item gold-icon" alt="" style="width:32px;" src="images/icon/check-fill.svg">
+                        <p class="fs-5 mb-0">Dynamic Supply Reduction</p>
+                    </div>
+                    <div class="d-flex flex-row gap-2 align-items-center">
+                        <img class="grayscale-item gold-icon" alt="" style="width:32px;" src="images/icon/check-fill.svg">
+                        <p class="fs-5 mb-0">Play-to-Earn Mobile Game</p>
+                    </div>
+                    <style>
+                        .gold-icon {
+                            filter: brightness(0) saturate(100%) invert(77%) sepia(59%) saturate(628%) hue-rotate(359deg) brightness(103%) contrast(107%);
+                        }
+                    </style>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-5">
+                    <img class="animated-trade-image" alt="" src="assets/falc1.png">
+                </div>
+                <style>
+                    .animated-trade-image {
+                        width: 100%;
+                        animation: floatAndFlip 12s infinite ease-in-out;
+                        transform-style: preserve-3d;
+                        perspective: 1000px;
+                        transition: all 0.3s ease;
+                        backface-visibility: visible;
+                    }
+                    @keyframes floatAndFlip {
+                        0% { transform: translateY(0) rotateY(0deg); }
+                        30% { transform: translateY(-15px) rotateY(0deg); }
+                        45% { transform: translateY(0) rotateY(180deg); }
+                        75% { transform: translateY(15px) rotateY(180deg); }
+                        90% { transform: translateY(0) rotateY(360deg); }
+                        100% { transform: translateY(0) rotateY(360deg); }
+                    }
+                    .animated-trade-image:hover {
+                        animation-play-state: paused;
+                        filter: brightness(1.2);
+                    }
+                </style>
+            </div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card stats-card p-3">
+                            <p2 class="text-gold text-center">Coming soon...</p2>
+                            <p class="text-white text-center">Stake ERION</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card stats-card p-3">
+                            <p2 class="text-gold text-center">Coming soon...</p2>
+                            <p class="text-white text-center">Claim Staked Rewards</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card stats-card p-3">
+                            <p2 class="text-gold text-center">Coming soon...</p2>
+                            <p class="text-white text-center">Game Rewards</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card stats-card p-3">
+                            <p2 class="text-gold text-center">Coming soon...</p2>
+                            <p class="text-white text-center">Burn Tokens</p>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    .stats-card {
+                        background: rgba(0, 0, 0, 0.8);
+                        border: 1px solid rgba(255, 215, 0, 0.2);
+                        transition: all 0.3s ease;
+                    }
+                    .stats-card:hover {
+                        transform: translateY(-5px);
+                        border: 1px solid rgba(255, 215, 0, 0.5);
+                        box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+                    }
+                    .text-gold { color: #FFD700; }
+                    .text-white { color: #ffffff; opacity: 0.9; }
+                </style>
+            </div>
+        </div>
+    </section>
+    <!-- Game Section -->
+    <section class="container-fluid align-items-center meme-section pb-5 mt-4" id="game">
+        <div class="container game-section crypt-card justify-content-center text-bg-dark p-4" style="border:1px solid #FFD700">
+            <div class="text-center mb-5">
+                <h2 style="font-size: 60px; font-weight: 700; background: linear-gradient(to right, #FFD700, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Orbitron', sans-serif;">Erion: Falcon's Ascent</h2>
+                <p class="crypt-grayscale-400 mt-3" style="font-size: 1.2rem;">A thrilling mobile battle arena game where you collect, train, and battle NFT falcons to earn ERION tokens!</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 col-lg-6 p-3">
+                    <img class="game-image" src="assets/falc3.png" alt="Erion Game Falcon">
+                    <style>
+                        .game-image {
+                            width: 100%;
+                            max-width: 400px;
+                            margin: 0 auto;
+                            display: block;
+                            animation: pulseGlow 2s infinite ease-in-out;
+                        }
+                        @keyframes pulseGlow {
+                            0% { filter: brightness(1); }
+                            50% { filter: brightness(1.2); box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+                            100% { filter: brightness(1); }
+                        }
+                    </style>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 p-3">
+                    <h3 style="color: #FFD700; font-family: 'Orbitron', sans-serif;">Game Features</h3>
+                    <ul class="game-features-list mt-3">
+                        <li>Collect and train unique NFT falcons with distinct abilities.</li>
+                        <li>Compete in real-time PvP battles and global tournaments.</li>
+                        <li>Earn ERION tokens through victories and leaderboard rankings.</li>
+                        <li>Trade falcons and items on the Erion Marketplace.</li>
+                        <li>Explore a dynamic world with evolving quests and challenges.</li>
+                    </ul>
+                    <div class="d-flex mt-4 gap-3">
+                        <a href="#newsletterForm" class="btn btn-lg shiny-cta text-uppercase">Join the Waitlist</a>
+                        <a href="assets/game-trailer.mp4" class="btn btn-lg btn-outline-warning text-uppercase">Watch Trailer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h3 style="color: #FFD700; font-family: 'Orbitron', sans-serif;">Game Modes</h3>
+                </div>
+                <div class="game-modes-container">
+                    <div class="game-mode-box">
+                        <div class="game-mode-icon">
+                            <i class="fas fa-sword"></i>
+                        </div>
+                        <h4 class="text-white">Arena Battles</h4>
+                        <p>Face off in 1v1 or team-based PvP battles to earn rewards.</p>
+                    </div>
+                    <div class="game-mode-box">
+                        <div class="game-mode-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <h4 class="text-white">Quest Mode</h4>
+                        <p>Embark on epic quests to unlock rare falcons and items.</p>
+                    </div>
+                    <div class="game-mode-box">
+                        <div class="game-mode-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4 class="text-white">Tournaments</h4>
+                        <p>Compete globally for massive ERION prize pools.</p>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .game-section {
+                    background: linear-gradient(145deg, rgba(10, 10, 26, 0.9), rgba(26, 26, 58, 0.9));
+                    border-radius: 15px;
+                }
+                .game-features-list {
+                    list-style: none;
+                    padding: 0;
+                    color: #fff;
+                }
+                .game-features-list li {
+                    margin: 0.8rem 0;
+                    padding-left: 1.5rem;
+                    position: relative;
+                    font-size: 1rem;
+                }
+                .game-features-list li::before {
+                    content: '▸';
+                    color: #FFD700;
+                    position: absolute;
+                    left: 0;
+                    animation: pulse 2s infinite;
+                }
+                .game-modes-container {
+                    display: flex;
+                    justify-content: center;
+                    gap: 2rem;
+                    flex-wrap: wrap;
+                    padding: 0 2rem;
+                }
+                .game-mode-box {
+                    flex: 1;
+                    max-width: 300px;
+                    background: rgba(0, 0, 0, 0.4);
+                    padding: 1.5rem;
+                    border-radius: 10px;
+                    text-align: center;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    border: 1px solid rgba(255, 215, 0, 0.2);
+                }
+                .game-mode-box:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+                    border-color: #FFD700;
+                }
+                .game-mode-icon {
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 auto 1rem;
+                    background: linear-gradient(135deg, #FFD700, #FFA500);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .game-mode-icon i {
+                    font-size: 1.5rem;
+                    color: #000;
+                }
+                .game-mode-box h4 {
+                    font-size: 1.3rem;
+                    margin-bottom: 0.5rem;
+                }
+                .game-mode-box p {
+                    color: #fff;
+                    font-size: 0.9rem;
+                    opacity: 0.8;
+                }
+                @media (max-width: 768px) {
+                    .game-modes-container {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .game-mode-box {
+                        width: 100%;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+                @keyframes pulse {
+                    0% { opacity: 0.5; }
+                    50% { opacity: 1; }
+                    100% { opacity: 0.5; }
+                }
+            </style>
+        </div>
+    </section>
+    <!-- Roadmap -->
+
+    <section class="container-fluid align-items-center erion-game-scenes-section" id="erion-game-scenes">
+        <div class="container erion-game-scenes-container pt-5 pb-5">
+            <div class="erion-game-scenes-star-wrapper d-flex justify-content-end position-relative">
+                <img class="erion-game-scenes-floating-star position-absolute" src="assets/comic_star.png" alt="Comic Star" width="150">
+            </div>
+            <h2 class="erion-game-scenes-title text-center">Epic Game Scenes</h2>
+            <p class="erion-game-scenes-subtitle text-center">Dive into the thrilling world of Erion: Falcon’s Ascent!</p>
+            <div class="erion-game-scenes-content mt-5">
+                <div class="erion-game-scenes-bg">
+                    <div class="erion-game-scenes-sky-comic"></div>
+                    <div class="erion-game-scenes-cloud erion-game-scenes-cloud-1"></div>
+                    <div class="erion-game-scenes-cloud erion-game-scenes-cloud-2"></div>
+                </div>
+                <div class="erion-game-scenes-row erion-game-scenes-row-top">
+                    <div class="erion-game-scenes-slider">
+                        <div class="erion-game-scene-card">
+                            <img src="assets/scene_arena.png" alt="Arena Battle" class="erion-game-scene-image">
+                            <h3 class="erion-game-scene-card-title">Arena Battle</h3>
+                            <p class="erion-game-scene-card-description">Clash in high-stakes PvP battles with your NFT falcons!</p>
+                        </div>
+                        <div class="erion-game-scene-card">
+                            <img src="assets/scene_quest.png" alt="Quest Mode" class="erion-game-scene-image">
+                            <h3 class="erion-game-scene-card-title">Quest Mode</h3>
+                            <p class="erion-game-scene-card-description">Embark on epic adventures to unlock rare rewards.</p>
+                        </div>
+                        <div class="erion-game-scene-card">
+                            <img src="assets/scene_arena.png" alt="Arena Battle" class="erion-game-scene-image">
+                            <h3 class="erion-game-scene-card-title">Arena Battle</h3>
+                            <p class="erion-game-scene-card-description">Clash in high-stakes PvP battles with your NFT falcons!</p>
+                        </div>
+                        <div class="erion-game-scene-card">
+                            <img src="assets/scene_quest.png" alt="Quest Mode" class="erion-game-scene-image">
+                            <h3 class="erion-game-scene-card-title">Quest Mode</h3>
+                            <p class="erion-game-scene-card-description">Embark on epic adventures to unlock rare rewards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="erion-game-scenes-row erion-game-scenes-row-bottom">
+                    <div class="erion-game-scenes-slider">
+                        <div class="erion-game-scene-card">
+                            <img src="assets/scene_market.png" alt="Marketplace" class="erion-game-scene-image">
+                            <h3 class="erion-game-scene-card-title">Marketplace</h3>
+                            <p class="erion-game-scene-card-description">Trade unique falcons and items with players worldwide.</p>
+                        </div>
+                        <div class="erion-game-scene-card">
+                            <img src="assets/scene_tournament.png" alt="Tournament" class="erion-game-scene-image">
+                            <h3 class="erion-game-scene-card-title">Tournament</h3>
+                            <p class="erion-game-scene-card-description">Compete globally for massive ERION prize pools!</p>
+                        </div>
+                        <div class="erion-game-scene-card">
+                            <img src="assets/scene_market.png" alt="Marketplace" class="erion-game-scene-image">
+                            <h3 class="erion-game-scene-card-title">Marketplace</h3>
+                            <p class="erion-game-scene-card-description">Trade unique falcons and items with players worldwide.</p>
+                        </div>
+                        <div class="erion-game-scene-card">
+                            <img src="assets/scene_tournament.png" alt="Tournament" class="erion-game-scene-image">
+                            <h3 class="erion-game-scene-card-title">Tournament</h3>
+                            <p class="erion-game-scene-card-description">Compete globally for massive ERION prize pools!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+    
+            .erion-game-scenes-section#erion-game-scenes {
+                position: relative;
+                background: linear-gradient(145deg, #1a1a3a, #0a0a1a);
+                overflow: hidden;
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .erion-game-scenes-container {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+            }
+            .erion-game-scenes-title {
+                font-family: 'Bungee', sans-serif !important;
+                font-size: 4rem !important;
+                color: #FFD700 !important;
+                text-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 4px 4px 0 #000 !important;
+                margin: 0 0 1rem 0 !important;
+                padding: 0 !important;
+                line-height: 1.2 !important;
+                animation: erion-game-scenes-glow 2s ease-in-out infinite alternate;
+            }
+            .erion-game-scenes-subtitle {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.5rem;
+                color: #ffffff;
+                opacity: 0.9;
+                margin: 0 0 3rem 0;
+                padding: 0;
+            }
+            .erion-game-scenes-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+            }
+            .erion-game-scenes-sky-comic {
+                background: url('assets/comic_sky.jpg') no-repeat center center/cover;
+                width: 100%;
+                height: 100%;
+                opacity: 0.85;
+                animation: erion-game-scenes-sky-pulse 10s infinite alternate;
+            }
+            .erion-game-scenes-cloud {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                animation: erion-game-scenes-cloud-drift 25s linear infinite;
+            }
+            .erion-game-scenes-cloud-1 {
+                background: url('assets/comic_cloud1.png') repeat-x;
+                top: 10%;
+            }
+            .erion-game-scenes-cloud-2 {
+                background: url('assets/comic_cloud2.png') repeat-x;
+                top: 70%;
+                animation-direction: reverse;
+                animation-duration: 30s;
+            }
+            .erion-game-scenes-row {
+                margin-bottom: 2rem;
+                overflow: hidden;
+            }
+            .erion-game-scenes-slider {
+                display: flex;
+                width: 2400px; /* 4 cards * 300px + margins */
+                will-change: transform;
+            }
+            .erion-game-scenes-row-top .erion-game-scenes-slider {
+                animation: erion-game-scenes-slide-right 20s linear infinite;
+            }
+            .erion-game-scenes-row-bottom .erion-game-scenes-slider {
+                animation: erion-game-scenes-slide-left 20s linear infinite;
+            }
+            .erion-game-scene-card {
+                width: 300px;
+                background: #ffffff;
+                border: 6px solid #000;
+                border-radius: 15px;
+                margin: 0 1rem;
+                padding: 1rem;
+                text-align: center;
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 5px 5px 0 #000;
+                transition: transform 0.3s ease;
+            }
+            .erion-game-scene-card:hover {
+                transform: scale(1.05);
+            }
+            .erion-game-scene-image {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border: 4px solid #FFD700;
+                border-radius: 10px;
+                margin-bottom: 1rem;
+            }
+            .erion-game-scene-card-title {
+                font-family: 'Bungee', sans-serif !important;
+                font-size: 1.6rem !important;
+                color: #FFD700 !important;
+                text-shadow: 2px 2px 0 #000 !important;
+                margin: 0 0 0.5rem 0 !important;
+                padding: 0 !important;
+            }
+            .erion-game-scene-card-description {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1rem;
+                color: #000;
+                margin: 0;
+            }
+            .erion-game-scenes-floating-star {
+                animation: erion-game-scenes-float-spin 5s ease-in-out infinite;
+                z-index: 1;
+            }
+            @media (max-width: 768px) {
+                .erion-game-scenes-title {
+                    font-size: 2.5rem !important;
+                }
+                .erion-game-scenes-subtitle {
+                    font-size: 1.2rem;
+                }
+                .erion-game-scene-card {
+                    width: 250px;
+                }
+                .erion-game-scene-image {
+                    height: 150px;
+                }
+                .erion-game-scenes-slider {
+                    width: 2000px; /* Adjusted for smaller cards */
+                }
+            }
+            @keyframes erion-game-scenes-glow {
+                0% { text-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 4px 4px 0 #000; }
+                100% { text-shadow: 0 0 25px rgba(255, 215, 0, 1), 6px 6px 0 #000; }
+            }
+            @keyframes erion-game-scenes-sky-pulse {
+                0% { opacity: 0.85; }
+                100% { opacity: 0.65; }
+            }
+            @keyframes erion-game-scenes-cloud-drift {
+                0% { background-position: 0 0; }
+                100% { background-position: 2000px 0; }
+            }
+            @keyframes erion-game-scenes-slide-right {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-1200px); } /* Half of slider width */
+            }
+            @keyframes erion-game-scenes-slide-left {
+                0% { transform: translateX(-1200px); } /* Start offset */
+                100% { transform: translateX(0); }
+            }
+            @keyframes erion-game-scenes-float-spin {
+                0%, 100% { transform: translateY(0) rotate(0deg); }
+                50% { transform: translateY(-20px) rotate(180deg); }
+            }
+        </style>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="container-fluid text-left text-lg-start crypt-footer bg5 border border-top-0 pt-3">
+        <div class="container-fluid card newsletter-section">
+            <div class="d-flex position-relative">
+                <img class="position-absolute z-0 floating-star" src="images/slider/star.svg" alt="" width="250">
+            </div>
+            <div class="d-flex justify-content-end position-relative">
+                <img class="position-absolute z-0 floating-map" src="images/slider/map.svg" alt="" width="900">
+            </div>
+            <div class="d-sm-flex align-items-center justify-content-between px-3 px-sm-5">
+                <div class="col-md-6 mb-5 pt-5">
+                    <div class="d-flex flex-column newsletter-text mb-4">
+                        <h3 class="text-uppercase mb-2 z-1 golden-text">Join Our Newsletter! 🪂</h3>
+                        <p class="mt-2 z-1 text-white">Get updates, insights, and reports on the erion token.</p>
+                        <div class="newsletter-form-container">
+                            <form class="glowing-form" id="newsletterForm">
+                                <input class="newsletter-input" type="email" maxlength="50" required
+                                    placeholder="Enter your email address" id="newsletterEmail" />
+                                <button type="submit" class="newsletter-btn">Subscribe</button>
+                            </form>
+                            <div id="newsletterMessage" class="mt-2 text-center"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-5 pt-5">
+                    <div class="card p-4">
+                        <div class="d-sm-flex justify-content-between align-items-center mb-3">
+                            <h3 class="fw-medium crypt-grayscale-100">FAQ</h3>
+                            <p class="fw-medium crypt-grayscale-300">Didn't find the answer? <a
+                                    href="mailto:info@eriontoken.com" class="link-info">Ask a question</a></p>
+                        </div>
+                        <div class="accordion in-view">
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="headingOne">
+                                    <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What is ERION Token?
+                                    </button>
+                                </div>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        An ERC-20 token combining gaming utility, auto-staking rewards, and dynamic
+                                        supply reduction through burns.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button fs-5 collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        How to stake ERION?
+                                    </button>
+                                </div>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Log in to the ERION app, click on <b><span style="color:#FFA500">Wallet</span></b>, select your preferred staking duration, and tap <b><span style="color:#FFA500">Stake</span></b>. You can view your staked balance and rewards anytime.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="headingThree">
+                                    <button class="accordion-button fs-5 collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        What's the Play-to-Earn game?
+                                    </button>
+                                </div>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        A mobile battle arena game where players compete and earn ERION tokens through
+                                        gameplay and tournaments.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="headingFour">
+                                    <button class="accordion-button fs-5 collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        When is the launch?
+                                    </button>
+                                </div>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        ERION Gaming launches on June 1, 2025, with its native token, ERION Coin, set to follow a few months later.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="marquee-container">
+                <div class="scroll-text">
+                    <div class='text-white'>
+                        $ERION<span class="gold-text"> Gaming 🎮 </span>Play to Earn<span class="white-text"> 🎮 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 in-view">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <a href="#">
+                                <img src="assets/logo2.png" alt="ERION Logo" class="footer-logo-img">
+                            </a>
+                        </div>
+                        <p class="footer-tagline">Play, Earn, and Grow with ERION<br>The Future of Gaming</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://x.com/erioncoin?s=21" rel="nofollow" target="_blank" class="social-link">
+                            <img src="images/social/x.svg" alt="X (Twitter)" width="24">
+                        </a>
+                        <a href="https://t.me/ERIONcoin" rel="nofollow" target="_blank" class="social-link">
+                            <i class="fab fa-telegram fa-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/eriongames_?igsh=aGFvMm1laHF4d243&utm_source=qr" rel="nofollow" target="_blank" class="social-link">
+                            <img src="images/social/instagram.svg" alt="Instagram" width="24">
+                        </a>
+                        <a href="https://www.tiktok.com/@erion_game?_t=ZM-8wLiKEPt44N&_r=1" rel="nofollow" target="_blank" class="social-link">
+                            <img src="images/social/tiktok.svg" alt="Tiktok" width="24">
+                        </a>
+                        <a href="https://discord.gg/SZh7Gpa5vN" rel="nofollow" target="_blank" class="social-link">
+                            <img src="images/social/discord.svg" alt="Discord" width="24">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    Copyright © 2025 - <a href="#" class="copyright-link">Erion Token</a>
+                </div>
+            </div>
+            <style>
+                .footer-content {
+                    padding: 3rem 1rem;
+                    text-align: center;
+                    background: rgba(0, 0, 0, 0.3);
+                    border-top: 1px solid rgba(255, 215, 0, 0.1);
+                }
+                .footer-main {
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+                .footer-brand {
+                    margin-bottom: 2rem;
+                }
+                .footer-logo {
+                    margin-bottom: 1.5rem;
+                }
+                .footer-logo-img {
+                    width: 100px;
+                    height: 90px;
+                    transition: transform 0.3s ease;
+                }
+                .footer-logo-img:hover {
+                    transform: scale(1.1);
+                }
+                .footer-tagline {
+                    color: #fff;
+                    font-size: 1.1rem;
+                    opacity: 0.9;
+                    margin: 0;
+                    line-height: 1.6;
+                }
+                .footer-social {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1.5rem;
+                    margin-bottom: 2rem;
+                }
+                .social-link {
+                    padding: 0.5rem;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+                .social-link:hover {
+                    background: rgba(255, 215, 0, 0.2);
+                    transform: translateY(-3px);
+                }
+                .social-link i {
+                    color: #ffffff;
+                }
+                .footer-copyright {
+                    color: #ffffff;
+                    opacity: 0.7;
+                    font-size: 0.9rem;
+                    padding-top: 2rem;
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                }
+                .copyright-link {
+                    color: #FFD700;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+                .copyright-link:hover {
+                    color: #FFA500;
+                }
+                @media (max-width: 768px) {
+                    .footer-content {
+                        padding: 2rem 1rem;
+                    }
+                    .footer-tagline {
+                        font-size: 1rem;
+                    }
+                }
+            </style>
+        </div>
+    </footer>
+    <script src="https://www.amcharts.com/lib/amcharts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#newsletterForm').on('submit', function (e) {
+                e.preventDefault();
+                const email = $('#newsletterEmail').val();
+                const submitBtn = $(this).find('button[type="submit"]');
+                submitBtn.prop('disabled', true).html('Subscribing...');
+                $.ajax({
+                    url: 'https://vtubiz.com/api/save-erion',
+                    method: 'POST',
+                    data: { email: email },
+                    success: function (response) {
+                        let messageClass = '';
+                        switch (response.message) {
+                            case 'saved':
+                                messageClass = 'text-success';
+                                $('#newsletterMessage').html('Thanks for subscribing! 🎉');
+                                $('#newsletterEmail').val('');
+                                break;
+                            case 'already saved':
+                                messageClass = 'text-warning';
+                                $('#newsletterMessage').html('You are already subscribed! 📧');
+                                break;
+                            case 'not save':
+                                messageClass = 'text-danger';
+                                $('#newsletterMessage').html('Oops! Something went wrong. Please try again. ❌');
+                                break;
+                        }
+                        $('#newsletterMessage').removeClass().addClass(messageClass);
+                    },
+                    error: function () {
+                        $('#newsletterMessage')
+                            .removeClass()
+                            .addClass('text-danger')
+                            .html('Connection error. Please try again later. ⚠️');
+                    },
+                    complete: function () {
+                        submitBtn.prop('disabled', false).html('Subscribe');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Erion Token | Ambassador Program</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/svg" href="assets/logo2.png">
+    <style>
+        body {
+            background: #0a0a1a;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(10, 10, 26, 0.9), rgba(26, 26, 58, 0.9));
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/slider/map.svg') center/cover no-repeat;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .hero-content {
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            background: linear-gradient(to right, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 2rem;
+        }
+
+        .btn-cta {
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            color: #000;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.05);
+        }
+
+        .header-boxed {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .nav-link {
+            font-family: 'Orbitron', sans-serif;
+            color: #FFD700 !important;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #FFA500 !important;
+        }
+
+        .features-section {
+            padding: 4rem 2rem;
+            background: rgba(10, 10, 26, 0.8);
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 1400px;
+        }
+
+        .feature-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon i {
+            font-size: 1.8rem;
+            color: #000;
+        }
+
+        .why-join-section,
+        .testimonials-section,
+        .faq-section {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .testimonials-section {
+            background: rgba(26, 26, 58, 0.8);
+            border-radius: 20px;
+        }
+
+        .testimonial-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 1rem;
+        }
+
+        .faq-section details {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .faq-section summary {
+            font-weight: 600;
+            cursor: pointer;
+            color: #FFD700;
+        }
+
+        .newsletter-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(145deg, rgba(10, 10, 26, 0.9), rgba(26, 26, 58, 0.9));
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .newsletter-form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .glowing-form {
+            display: flex;
+            gap: 0.5rem;
+            background: rgba(255, 215, 0, 0.1);
+            padding: 0.5rem;
+            border-radius: 50px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 25px;
+            background: #fff;
+            color: #000;
+        }
+
+        .newsletter-btn {
+            background: linear-gradient(90deg, #4f3301, #FFA500);
+            color: #000;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .footer-content {
+            padding: 3rem 1rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .footer-logo-img {
+            width: 100px;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-logo-img:hover {
+            transform: scale(1.1);
+        }
+
+        .social-link {
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 215, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .features-section,
+            .why-join-section,
+            .testimonials-section,
+            .faq-section {
+                padding: 2rem 1rem;
+            }
+
+            .feature-box {
+                margin-bottom: 1.5rem;
+            }
+        }
+    
+        .newsletter-form-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .newsletter-btn {
+            display: inline-block;
+
+            padding: 14px 28px;
+            font-size: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        .newsletter-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-boxed fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="crypt-logo">
+                <a href="#home">
+                    <img src="assets/logo2.png" alt="Erion Logo" class="h-12">
+                </a>
+            </div>
+            <div class="d-flex gap-4 align-items-center hidesmscreen">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#roadmap">Roadmap</a>
+                <a class="nav-link" href="#tokenomics">Tokenomics</a>
+                <a class="btn-cta" href="https://eriontoken.com">Visit Website</a>
+            </div>
+            <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Offcanvas Navbar -->
+    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav gap-3">
+                <li><a class="nav-link h4" href="#home">Home</a></li>
+                <li><a class="nav-link h4" href="#about">About</a></li>
+                <li><a class="nav-link h4" href="#roadmap">Roadmap</a></li>
+                <li><a class="nav-link h4" href="#tokenomics">Tokenomics</a></li>
+                <li><a class="nav-link h4" href="mailto:info@eriontoken.com">Support</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="text-uppercase">Erion Ambassador Program</h1>
+            <p>Join a global community of Web3 enthusiasts to champion ERION's mission in the GameFi ecosystem. Be the
+                face of innovation and drive the future of gaming!</p>
+            <a href="#apply" class="btn-cta">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="text-center mb-5">
+            <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+                What It Entails</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded"></div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-fire-alt"></i></div>
+                <h3 class="text-xl font-semibold text-yellow-400">Be a GameFi Pioneer</h3>
+                <p>Showcase your passion and creativity as an ERION ambassador, representing the brand online and
+                    offline in your community.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                <h3 class="text-xl font-semibold text-yellow-400">Exclusive Opportunities</h3>
+                <p>Selected ambassadors will gain early access and unique rewards before the official launch.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="text-xl font-semibold text-yellow-400">Build Trust</h3>
+                <p>Engage with the community to foster trust and drive adoption of ERION’s innovative GameFi solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section class="why-join-section">
+        <div class="text-center mb-5">
+            <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+                Why Join Us?</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded"></div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-star"></i></div>
+                <h3 class="text-xl font-semibold text-yellow-400">Exclusive Rewards</h3>
+                <p>Earn tokens, merchandise, and other perks for your contributions.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                <h3 class="text-xl font-semibold text-yellow-400">Global Community</h3>
+                <p>Connect with like-minded Web3 enthusiasts worldwide.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                <h3 class="text-xl font-semibold text-yellow-400">Shape the Future</h3>
+                <p>Influence the development of ERION’s GameFi ecosystem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="text-center mb-5">
+            <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+                What Ambassadors Say</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded"></div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+            <div class="testimonial-box">
+                <p class="italic">"Being an ERION ambassador has been an incredible journey. I’ve connected with amazing
+                    people and helped shape the future of GameFi!"</p>
+                <p class="font-semibold text-yellow-400">- Pelumi, Community Lead</p>
+            </div>
+            <div class="testimonial-box">
+                <p class="italic">"The rewards and early access opportunities are fantastic. ERION truly values its
+                    ambassadors."</p>
+                <p class="font-semibold text-yellow-400">- Alex, Web3 Enthusiast</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="text-center mb-5">
+            <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+                Frequently Asked Questions</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded"></div>
+        </div>
+        <div>
+            <details>
+                <summary>Who can apply to be an ERION ambassador?</summary>
+                <p>Anyone passionate about Web3, blockchain, and gaming can apply. No prior experience is required, but
+                    enthusiasm and creativity are key!</p>
+            </details>
+            <details>
+                <summary>What are the responsibilities of an ambassador?</summary>
+                <p>Ambassadors promote ERION through social media, events, and community engagement, helping to spread
+                    awareness and build trust.</p>
+            </details>
+            <details>
+                <summary>How are ambassadors rewarded?</summary>
+                <p>Rewards include ERION tokens, exclusive merchandise, and early access to platform features, based on
+                    your contributions.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="apply">
+        <div class="text-center mb-5">
+            <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+                Join the ERION Journey</h2>
+            <p class="text-lg text-gray-300">Fill the form below to apply for the ERION Ambassador Program and be part
+                of our exciting launch!</p>
+        </div>
+
+
+        <div class="newsletter-form-container">
+            <a href="https://forms.gle/jsXRhJM9xksWtJwo7" class="newsletter-btn" target="_blank"
+                rel="noopener noreferrer">
+                Apply Now
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="container-fluid text-left text-lg-start crypt-footer bg5 border border-top-0 pt-3">
+
+
+
+
+        <div class="container mt-5 in-view">
+
+            <!-- Link -->
+            <div class="footer-content">
+                <div class="footer-main">
+
+
+                    <!-- Social Media Links -->
+                    <div class="footer-social">
+                        <a href="https://x.com/erioncoin?s=21" rel="nofollow" target="_blank" class="social-link">
+                            <img src="images/social/x.svg" alt="X (Twitter)" width="24">
+                        </a>
+                        <a href="https://t.me/ERIONcoin" rel="nofollow" target="_blank" class="social-link">
+                            <i class="fab fa-telegram fa-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/eriongames_?igsh=aGFvMm1laHF4d243&utm_source=qr"
+                            rel="nofollow" target="_blank" class="social-link">
+                            <img src="images/social/instagram.svg" alt="Instagram" width="24">
+                        </a>
+                        <a href="https://www.tiktok.com/@erion_game?_t=ZM-8wLiKEPt44N&_r=1" rel="nofollow"
+                            target="_blank" class="social-link">
+                            <img src="images/social/tiktok.svg" alt="Tiktok" width="24">
+                        </a>
+                        <a href="https://discord.gg/SZh7Gpa5vN" rel="nofollow" target="_blank" class="social-link">
+                            <img src="images/social/discord.svg" alt="Tiktok" width="24">
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="footer-copyright">
+                    Copyright © 2025 - <a href="#" class="copyright-link">Erion Token</a>
+                </div>
+            </div>
+
+            <style>
+                .footer-content {
+                    padding: 3rem 1rem;
+                    text-align: center;
+                    background: rgba(0, 0, 0, 0.3);
+                    border-top: 1px solid rgba(255, 215, 0, 0.1);
+                }
+
+                .footer-main {
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+
+                .footer-brand {
+                    margin-bottom: 2rem;
+                }
+
+                .footer-logo {
+                    margin-bottom: 1.5rem;
+                }
+
+                .footer-logo-img {
+                    width: 100px;
+                    height: 90px;
+                    transition: transform 0.3s ease;
+                }
+
+                .footer-logo-img:hover {
+                    transform: scale(1.1);
+                }
+
+                .footer-tagline {
+                    color: #fff;
+                    font-size: 1.1rem;
+                    opacity: 0.9;
+                    margin: 0;
+                    line-height: 1.6;
+                }
+
+                .footer-social {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1.5rem;
+                    margin-bottom: 2rem;
+                }
+
+                .social-link {
+                    padding: 0.5rem;
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+
+                .social-link:hover {
+                    background: rgba(255, 215, 0, 0.2);
+                    transform: translateY(-3px);
+                }
+
+                .social-link i {
+                    color: #ffffff;
+                }
+
+                .footer-copyright {
+                    color: #ffffff;
+                    opacity: 0.7;
+                    font-size: 0.9rem;
+                    padding-top: 2rem;
+                    border-top: 1px solid rgba(255, 255, 255, 0.1);
+                }
+
+                .copyright-link {
+                    color: #FFD700;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+
+                .copyright-link:hover {
+                    color: #FFA500;
+                }
+
+                @media (max-width: 768px) {
+                    .footer-content {
+                        padding: 2rem 1rem;
+                    }
+
+                    .footer-tagline {
+                        font-size: 1rem;
+                    }
+                }
+            </style>
+
+
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#newsletterForm').on('submit', function (e) {
+                e.preventDefault();
+                const email = $('#newsletterEmail').val();
+                const submitBtn = $(this).find('button[type="submit"]');
+                submitBtn.prop('disabled', true).html('Applying...');
+                $.ajax({
+                    url: 'https://vtubiz.com/api/save-erion',
+                    method: 'POST',
+                    data: { email: email },
+                    success: function (response) {
+                        let messageClass = '';
+                        switch (response.message) {
+                            case 'saved':
+                                messageClass = 'text-green-500';
+                                $('#newsletterMessage').html('Application submitted! 🎉 We’ll be in touch soon.');
+                                $('#newsletterEmail').val('');
+                                break;
+                            case 'already saved':
+                                messageClass = 'text-yellow-500';
+                                $('#newsletterMessage').html('You’ve already applied! 📧 Check your email for updates.');
+                                break;
+                            case 'not save':
+                                messageClass = 'text-red-500';
+                                $('#newsletterMessage').html('Oops! Something went wrong. Please try again. ❌');
+                                break;
+                        }
+                        $('#newsletterMessage').removeClass().addClass(messageClass);
+                    },
+                    error: function () {
+                        $('#newsletterMessage').removeClass().addClass('text-red-500').html('Connection error. Please try again later. ⚠️');
+                    },
+                    complete: function () {
+                        submitBtn.prop('disabled', false).html('Apply Now');
+                    }
+                });
+            });
+
+            // GSAP Animations
+            gsap.from('.hero-content', { opacity: 0, y: 50, duration: 1, ease: 'power2.out' });
+            gsap.from('.feature-box', {
+                scrollTrigger: { trigger: '.features-section', start: 'top 80%' },
+                opacity: 0,
+                y: 30,
+                stagger: 0.2,
+                duration: 0.8,
+                ease: 'power2.out'
+            });
+        });
+    </script>
+</body>
+
+</html>
