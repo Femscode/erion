@@ -33,6 +33,523 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="stylesheet" href="animation/css/stylesheet.css"> -->
+    <style>
+        .footer-content {
+            padding: 3rem 1rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .footer-main {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo-img {
+            width: 100px;
+            height: 90px;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-logo-img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer-tagline {
+            color: #fff;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 215, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .social-link i {
+            color: #ffffff;
+        }
+
+        .footer-copyright {
+            color: #ffffff;
+            opacity: 0.7;
+            font-size: 0.9rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .copyright-link {
+            color: #FFD700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .copyright-link:hover {
+            color: #FFA500;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                padding: 2rem 1rem;
+            }
+
+            .footer-tagline {
+                font-size: 1rem;
+            }
+        }
+        .timeline-container {
+            position: relative;
+            padding: 2rem 0;
+            overflow: hidden;
+            /* Prevent line breakage */
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, #FFD700, transparent);
+            animation: glow 2s infinite alternate;
+            z-index: 1;
+            /* Ensure line stays above content */
+        }
+
+        /* Remove any background from phase titles */
+        .phase-title {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            background: transparent !important;
+            /* Force remove any background */
+        }
+
+        .phase-title span {
+            background: transparent !important;
+            /* Ensure date span also has no background */
+        }
+
+        /* Ensure timeline items don't cause line breaks */
+        #timeline {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            width: 100%;
+            clear: both;
+        }
+
+        /* Additional fix for continuous timeline */
+        .timeline-content {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .roadmap-title {
+            color: #FFD700;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+            margin-bottom: 2rem;
+        }
+
+
+        .timeline-item.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .timeline-icon {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #FFD700;
+            border-radius: 50%;
+            padding: 1rem;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: #FFD700;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+        }
+
+
+
+        .phase-date {
+            color: white;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .timeline-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-list li {
+            color: white;
+            margin: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-list li::before {
+            content: '▸';
+            color: #FFD700;
+            position: absolute;
+            left: 0;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-arrow {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700;
+            }
+
+            to {
+                box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        .stats-card {
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-5px);
+            border: 1px solid rgba(255, 215, 0, 0.5);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .text-gold {
+            color: #FFD700;
+        }
+
+        .text-white {
+            color: #ffffff;
+            opacity: 0.9;
+        }
+
+        .animated-trade-image {
+            width: 100%;
+            animation: floatAndFlip 12s infinite ease-in-out;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: all 0.3s ease;
+            backface-visibility: visible;
+        }
+
+        @keyframes floatAndFlip {
+            0% {
+                transform: translateY(0) rotateY(0deg);
+            }
+
+            30% {
+                transform: translateY(-15px) rotateY(0deg);
+            }
+
+            45% {
+                transform: translateY(0) rotateY(180deg);
+            }
+
+            75% {
+                transform: translateY(15px) rotateY(180deg);
+            }
+
+            90% {
+                transform: translateY(0) rotateY(360deg);
+            }
+
+            100% {
+                transform: translateY(0) rotateY(360deg);
+            }
+        }
+
+        .animated-trade-image:hover {
+            animation-play-state: paused;
+            filter: brightness(1.2);
+        }
+
+        .gold-icon {
+            filter: brightness(0) saturate(100%) invert(77%) sepia(59%) saturate(628%) hue-rotate(359deg) brightness(103%) contrast(107%);
+        }
+
+        .features-section {
+            padding: 4rem 0;
+            background: linear-gradient(145deg, rgba(10, 10, 26, 0.8) 0%, rgba(26, 26, 58, 0.8) 100%);
+            border-radius: 20px;
+        }
+
+        .features-title {
+            color: #FFD700;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .title-underline {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .features-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 0 2rem;
+        }
+
+        .feature-box {
+            flex: 1;
+            /* min-width: 280px; */
+            max-width: 350px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon i {
+            font-size: 1.8rem;
+            color: #000;
+        }
+
+        .feature-box h3 {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .feature-box h4 {
+            color: #FFA500;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .feature-box p {
+            color: #fff;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .features-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature-box {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .btn-outline-secondary.login-btn {
+            border: 2px solid #6c757d;
+            color: #ffffff;
+            background: transparent;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-secondary.login-btn:hover {
+            background: #6c757d;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary.register-btn {
+            background: linear-gradient(to right, #FFD700, #FFA500);
+            border: none;
+            color: black !important;
+            padding: 8px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary.register-btn:hover {
+
+            background: #6c757d;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-content-wrapper {
+            position: relative;
+            display: flex;
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .text-content {
+            flex: 1;
+            z-index: 2;
+        }
+
+        .falcon-desktop {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 600px;
+            z-index: 1;
+        }
+
+        .falcon-mobile {
+            display: none;
+            margin: 2rem 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .falcon-mobile img {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content-wrapper {
+                flex-direction: column;
+                padding: 2rem 1rem;
+            }
+
+            .falcon-desktop {
+                display: none;
+            }
+
+            .falcon-mobile {
+                display: block;
+            }
+
+            .text-content {
+                text-align: center;
+            }
+
+            .text-content h3.col-md-8 {
+                width: 100%;
+                margin: 0 auto;
+                text-align: left;
+            }
+        }
+
+        .flying-falcon-main {
+            width: 100%;
+            height: auto;
+            animation: hoverInPlace 4s ease-in-out infinite;
+        }
+    </style>
 </head>
 
 <body class="crypt-dark section-dark font-set-1">
@@ -78,9 +595,18 @@
                             href="#roadmap">Roadmap</a>
                         <a class="nav-item text-link fw-bold text-uppercase crypt-grayscale-100"
                             href="#tokenomics">Tokenomics</a>
+                        <a class="nav-item btn btn-outline-secondary text-link fw-bold text-uppercase crypt-grayscale-100 d-flex align-items-center gap-2 login-btn"
+                            href="#">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                        <a class="nav-item btn btn-primary text-link fw-bold text-uppercase crypt-grayscale-100 d-flex align-items-center gap-2 register-btn"
+                            href="#">
+                            <i class="fas fa-user-plus"></i> Register
+                        </a>
 
                     </div>
                 </div>
+
 
                 <!-- Navigation menu / Button -->
                 <div class="col-auto d-flex flex-row align-items-center">
@@ -143,6 +669,15 @@
                             </li>
                             <li><a style="font-family: 'Montserrat';" class="nav-link h4"
                                     href="mailto:info@eriontoken.com">Support</a></li>
+
+                            <li><a  style="font-family: 'Montserrat';" class="nav-item btn btn-outline-secondary text-link text- crypt-grayscale-100 d-flex align-items-center gap-2 login-btn"
+                                    href="#">
+                                    <i class="fas fa-sign-in-alt"></i> Login
+                                </a></li>
+                            <li><a  style="font-family: 'Montserrat';" class="nav-item btn btn-primary text-link crypt-grayscale-100 d-flex align-items-center gap-2 register-btn"
+                                    href="#">
+                                    <i class="fas fa-user-plus"></i> Register
+                                </a></li>
                         </ul>
                         <!-- Carousel Slider -->
                         <!-- <div id="RewardCarousel" class="carousel slide card-bs mt-4" data-bs-ride="carousel">
@@ -224,72 +759,7 @@
                 </div>
             </div>
 
-            <style>
-                .hero-content-wrapper {
-                    position: relative;
-                    display: flex;
-                    padding: 4rem 2rem;
-                    max-width: 1400px;
-                    margin: 0 auto;
-                }
 
-                .text-content {
-                    flex: 1;
-                    z-index: 2;
-                }
-
-                .falcon-desktop {
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 600px;
-                    z-index: 1;
-                }
-
-                .falcon-mobile {
-                    display: none;
-                    margin: 2rem 0;
-                    width: 100%;
-                    text-align: center;
-                }
-
-                .falcon-mobile img {
-                    max-width: 300px;
-                    margin: 0 auto;
-                }
-
-                @media (max-width: 768px) {
-                    .hero-content-wrapper {
-                        flex-direction: column;
-                        padding: 2rem 1rem;
-                    }
-
-                    .falcon-desktop {
-                        display: none;
-                    }
-
-                    .falcon-mobile {
-                        display: block;
-                    }
-
-                    .text-content {
-                        text-align: center;
-                    }
-
-                    .text-content h3.col-md-8 {
-                        width: 100%;
-                        margin: 0 auto;
-                        text-align: left;
-                    }
-                }
-
-                .flying-falcon-main {
-                    width: 100%;
-                    height: auto;
-                    animation: hoverInPlace 4s ease-in-out infinite;
-                }
-            </style>
 
             <!-- Features -->
             <div class="container section-1600x">
@@ -336,107 +806,7 @@
                     </div>
                 </div>
 
-                <style>
-                    .features-section {
-                        padding: 4rem 0;
-                        background: linear-gradient(145deg, rgba(10, 10, 26, 0.8) 0%, rgba(26, 26, 58, 0.8) 100%);
-                        border-radius: 20px;
-                    }
 
-                    .features-title {
-                        color: #FFD700;
-                        font-size: 2.5rem;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                        margin-bottom: 1rem;
-                    }
-
-                    .title-underline {
-                        width: 80px;
-                        height: 4px;
-                        background: linear-gradient(90deg, #FFD700, #FFA500);
-                        margin: 0 auto;
-                        border-radius: 2px;
-                    }
-
-                    .features-container {
-                        display: flex;
-                        justify-content: center;
-                        gap: 2rem;
-                        flex-wrap: wrap;
-                        padding: 0 2rem;
-                    }
-
-                    .feature-box {
-                        flex: 1;
-                        /* min-width: 280px; */
-                        max-width: 350px;
-                        background: rgba(0, 0, 0, 0.3);
-                        padding: 1rem;
-                        border-radius: 15px;
-                        text-align: center;
-                        transition: transform 0.3s ease, box-shadow 0.3s ease;
-                        border: 1px solid rgba(255, 215, 0, 0.1);
-                    }
-
-                    .feature-box:hover {
-                        transform: translateY(-10px);
-                        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
-                        border-color: rgba(255, 215, 0, 0.3);
-                    }
-
-                    .feature-icon {
-                        width: 70px;
-                        height: 70px;
-                        margin: 0 auto 1.5rem;
-                        background: linear-gradient(135deg, #FFD700, #FFA500);
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    }
-
-                    .feature-icon i {
-                        font-size: 1.8rem;
-                        color: #000;
-                    }
-
-                    .feature-box h3 {
-                        color: #FFD700;
-                        font-size: 1.5rem;
-                        margin-bottom: 0.5rem;
-                        font-weight: 600;
-                    }
-
-                    .feature-box h4 {
-                        color: #FFA500;
-                        font-size: 1rem;
-                        margin-bottom: 1rem;
-                        font-weight: 500;
-                        opacity: 0.9;
-                    }
-
-                    .feature-box p {
-                        color: #fff;
-                        font-size: 0.9rem;
-                        line-height: 1.6;
-                        margin: 0;
-                        opacity: 0.8;
-                    }
-
-                    @media (max-width: 768px) {
-                        .features-container {
-                            flex-direction: column;
-                            align-items: center;
-                        }
-
-                        .feature-box {
-                            width: 100%;
-                            margin-bottom: 1.5rem;
-                        }
-                    }
-                </style>
             </div>
 
 
@@ -808,11 +1178,7 @@
                         <p class="fs-5 mb-0">Play-to-Earn Mobile Game</p>
                     </div>
 
-                    <style>
-                        .gold-icon {
-                            filter: brightness(0) saturate(100%) invert(77%) sepia(59%) saturate(628%) hue-rotate(359deg) brightness(103%) contrast(107%);
-                        }
-                    </style>
+
                     <!-- <div class="card card-border mt-4">
                         <div class="card-body">
                             <h4 class="card-title mb-2">Launching Q3 2025 with <span
@@ -828,47 +1194,7 @@
                     <img class="animated-trade-image" alt="" src="assets/falc1.png">
                 </div>
 
-                <style>
-                    .animated-trade-image {
-                        width: 100%;
-                        animation: floatAndFlip 12s infinite ease-in-out;
-                        transform-style: preserve-3d;
-                        perspective: 1000px;
-                        transition: all 0.3s ease;
-                        backface-visibility: visible;
-                    }
 
-                    @keyframes floatAndFlip {
-                        0% {
-                            transform: translateY(0) rotateY(0deg);
-                        }
-
-                        30% {
-                            transform: translateY(-15px) rotateY(0deg);
-                        }
-
-                        45% {
-                            transform: translateY(0) rotateY(180deg);
-                        }
-
-                        75% {
-                            transform: translateY(15px) rotateY(180deg);
-                        }
-
-                        90% {
-                            transform: translateY(0) rotateY(360deg);
-                        }
-
-                        100% {
-                            transform: translateY(0) rotateY(360deg);
-                        }
-                    }
-
-                    .animated-trade-image:hover {
-                        animation-play-state: paused;
-                        filter: brightness(1.2);
-                    }
-                </style>
 
             </div>
 
@@ -903,28 +1229,7 @@
                     </div>
                 </div>
 
-                <style>
-                    .stats-card {
-                        background: rgba(0, 0, 0, 0.8);
-                        border: 1px solid rgba(255, 215, 0, 0.2);
-                        transition: all 0.3s ease;
-                    }
 
-                    .stats-card:hover {
-                        transform: translateY(-5px);
-                        border: 1px solid rgba(255, 215, 0, 0.5);
-                        box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-                    }
-
-                    .text-gold {
-                        color: #FFD700;
-                    }
-
-                    .text-white {
-                        color: #ffffff;
-                        opacity: 0.9;
-                    }
-                </style>
             </div>
         </div>
     </section>
@@ -1014,172 +1319,7 @@
             </div>
         </div>
 
-        <style>
-            .timeline-container {
-                position: relative;
-                padding: 2rem 0;
-                overflow: hidden;
-                /* Prevent line breakage */
-            }
 
-            .timeline-container::before {
-                content: '';
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 2px;
-                height: 100%;
-                background: linear-gradient(to bottom, transparent, #FFD700, transparent);
-                animation: glow 2s infinite alternate;
-                z-index: 1;
-                /* Ensure line stays above content */
-            }
-
-            /* Remove any background from phase titles */
-            .phase-title {
-                color: #FFD700;
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-                background: transparent !important;
-                /* Force remove any background */
-            }
-
-            .phase-title span {
-                background: transparent !important;
-                /* Ensure date span also has no background */
-            }
-
-            /* Ensure timeline items don't cause line breaks */
-            #timeline {
-                position: relative;
-                width: 100%;
-                margin: 0 auto;
-            }
-
-            .timeline-item {
-                margin-bottom: 3rem;
-                position: relative;
-                width: 100%;
-                clear: both;
-            }
-
-            /* Additional fix for continuous timeline */
-            .timeline-content {
-                background: rgba(0, 0, 0, 0.8);
-                border: 1px solid rgba(255, 215, 0, 0.3);
-                border-radius: 8px;
-                padding: 1.5rem;
-                margin: 1rem 0;
-                transition: all 0.3s ease;
-                position: relative;
-                z-index: 2;
-            }
-
-            .roadmap-title {
-                color: #FFD700;
-                font-size: 3rem;
-                font-weight: bold;
-                text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-                margin-bottom: 2rem;
-            }
-
-
-            .timeline-item.visible {
-                transform: translateY(0);
-                opacity: 1;
-            }
-
-            .timeline-icon {
-                background: rgba(0, 0, 0, 0.8);
-                border: 2px solid #FFD700;
-                border-radius: 50%;
-                padding: 1rem;
-                position: relative;
-                z-index: 1;
-                transition: all 0.3s ease;
-            }
-
-            .timeline-icon:hover {
-                transform: scale(1.1);
-                box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-            }
-
-
-
-            .timeline-content:hover {
-                transform: translateY(-5px);
-                border-color: #FFD700;
-                box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
-            }
-
-
-
-            .phase-date {
-                color: white;
-                font-size: 1rem;
-                opacity: 0.8;
-            }
-
-            .timeline-list {
-                list-style: none;
-                padding: 0;
-            }
-
-            .timeline-list li {
-                color: white;
-                margin: 0.8rem 0;
-                padding-left: 1.5rem;
-                position: relative;
-            }
-
-            .timeline-list li::before {
-                content: '▸';
-                color: #FFD700;
-                position: absolute;
-                left: 0;
-                animation: pulse 2s infinite;
-            }
-
-            .floating-arrow {
-                animation: float 3s ease-in-out infinite;
-            }
-
-            @keyframes glow {
-                from {
-                    box-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700;
-                }
-
-                to {
-                    box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
-                }
-            }
-
-            @keyframes float {
-
-                0%,
-                100% {
-                    transform: translateY(0);
-                }
-
-                50% {
-                    transform: translateY(-20px);
-                }
-            }
-
-            @keyframes pulse {
-                0% {
-                    opacity: 0.5;
-                }
-
-                50% {
-                    opacity: 1;
-                }
-
-                100% {
-                    opacity: 0.5;
-                }
-            }
-        </style>
 
         <script>
             // Intersection Observer for scroll animations
@@ -1273,8 +1413,11 @@
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Log in to the ERION app, click on <b><span style="color:#FFA500">Wallet</span></b>, select your preferred staking duration, and tap <b><span style="color:#FFA500">Stake</span></b>. You can view your staked balance and rewards anytime.
-                                   
+                                        Log in to the ERION app, click on <b><span
+                                                style="color:#FFA500">Wallet</span></b>, select your preferred staking
+                                        duration, and tap <b><span style="color:#FFA500">Stake</span></b>. You can view
+                                        your staked balance and rewards anytime.
+
                                     </div>
                                 </div>
                             </div>
@@ -1305,7 +1448,8 @@
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        ERION Gaming launches on June 1, 2025, with its native token, ERION Coin, set to follow a few months later.
+                                        ERION Gaming launches on June 1, 2025, with its native token, ERION Coin, set to
+                                        follow a few months later.
                                     </div>
                                 </div>
                             </div>
@@ -1354,16 +1498,18 @@
                         <a href="https://t.me/ERIONcoin" rel="nofollow" target="_blank" class="social-link">
                             <i class="fab fa-telegram fa-xl"></i>
                         </a>
-                        <a href="https://www.instagram.com/eriongames_?igsh=aGFvMm1laHF4d243&utm_source=qr" rel="nofollow" target="_blank" class="social-link">
+                        <a href="https://www.instagram.com/eriongames_?igsh=aGFvMm1laHF4d243&utm_source=qr"
+                            rel="nofollow" target="_blank" class="social-link">
                             <img src="images/social/instagram.svg" alt="Instagram" width="24">
                         </a>
-                        <a href="https://www.tiktok.com/@erion_game?_t=ZM-8wLiKEPt44N&_r=1" rel="nofollow" target="_blank" class="social-link">
+                        <a href="https://www.tiktok.com/@erion_game?_t=ZM-8wLiKEPt44N&_r=1" rel="nofollow"
+                            target="_blank" class="social-link">
                             <img src="images/social/tiktok.svg" alt="Tiktok" width="24">
                         </a>
                         <a href="https://discord.gg/SZh7Gpa5vN" rel="nofollow" target="_blank" class="social-link">
                             <img src="images/social/discord.svg" alt="Tiktok" width="24">
                         </a>
-                      
+
                     </div>
                 </div>
 
@@ -1373,98 +1519,7 @@
                 </div>
             </div>
 
-            <style>
-                .footer-content {
-                    padding: 3rem 1rem;
-                    text-align: center;
-                    background: rgba(0, 0, 0, 0.3);
-                    border-top: 1px solid rgba(255, 215, 0, 0.1);
-                }
-
-                .footer-main {
-                    max-width: 600px;
-                    margin: 0 auto;
-                }
-
-                .footer-brand {
-                    margin-bottom: 2rem;
-                }
-
-                .footer-logo {
-                    margin-bottom: 1.5rem;
-                }
-
-                .footer-logo-img {
-                    width: 100px;
-                    height: 90px;
-                    transition: transform 0.3s ease;
-                }
-
-                .footer-logo-img:hover {
-                    transform: scale(1.1);
-                }
-
-                .footer-tagline {
-                    color: #fff;
-                    font-size: 1.1rem;
-                    opacity: 0.9;
-                    margin: 0;
-                    line-height: 1.6;
-                }
-
-                .footer-social {
-                    display: flex;
-                    justify-content: center;
-                    gap: 1.5rem;
-                    margin-bottom: 2rem;
-                }
-
-                .social-link {
-                    padding: 0.5rem;
-                    border-radius: 50%;
-                    transition: all 0.3s ease;
-                    background: rgba(255, 255, 255, 0.1);
-                }
-
-                .social-link:hover {
-                    background: rgba(255, 215, 0, 0.2);
-                    transform: translateY(-3px);
-                }
-
-                .social-link i {
-                    color: #ffffff;
-                }
-
-                .footer-copyright {
-                    color: #ffffff;
-                    opacity: 0.7;
-                    font-size: 0.9rem;
-                    padding-top: 2rem;
-                    border-top: 1px solid rgba(255, 255, 255, 0.1);
-                }
-
-                .copyright-link {
-                    color: #FFD700;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                }
-
-                .copyright-link:hover {
-                    color: #FFA500;
-                }
-
-                @media (max-width: 768px) {
-                    .footer-content {
-                        padding: 2rem 1rem;
-                    }
-
-                    .footer-tagline {
-                        font-size: 1rem;
-                    }
-                }
-            </style>
-
-
+          
 
         </div>
 
